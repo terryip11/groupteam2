@@ -6,7 +6,7 @@ import view from "../../public/images/view.jpg";
 import 'tailwindcss/tailwind.css';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
-
+import Image from 'next/image';
 
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -88,7 +88,7 @@ const Sidebar = () => {
             
                 
                 <div className='flex'>
-                    <img className="mt-20 w-20 h-20 rounded m-5" src={view.src} alt="logo" />
+                    <Image className="mt-20 rounded m-5" width={25} height={25} src={view.src} alt="logo" />
                     <h1 className='mt-20 text-5xl p-5'>Logo</h1>
                 </div>
 

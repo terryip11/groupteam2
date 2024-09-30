@@ -26,10 +26,10 @@ function Slideimg() {
     <>
       <div className='absolute w-auto h-96 m-4 z-[-1]' >
         <Image
+          width={25}
+          height={25}
           src={images[currentImageIndex]}
           alt="Slide Show Image"
-          layout="fill"
-          objectFit="cover"
         />
       </div>
     </>
