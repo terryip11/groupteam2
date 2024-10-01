@@ -29,11 +29,6 @@ return(
             <p>{club.contact_info.email}</p>
             <p>{club.contact_info.phone}</p>
             <p>{club.contact_info.website}</p>
-            <div>{club.inventory.map((item,indexs) =>{
-              <li key={indexs}>
-                <p>{item.name}</p>
-              </li>
-            })}</div>
           </li>
         ))}
       </ul>

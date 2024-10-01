@@ -2,12 +2,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Switch from '@mui/material/Switch';
-import view from "../../public/images/view.jpg";
+/* import view from "../../public/images/view.jpg"; */
 import 'tailwindcss/tailwind.css';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Image from 'next/image';
-
+import SvgIcon from '@mui/material/SvgIcon';
+import PhoneIcon from '@mui/icons-material/Phone';
+import ShareIcon from '@mui/icons-material/Share';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
+import logo from "../../public/images/logo.png";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -65,6 +69,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
   }));
   
+
+  function HomeIcon(props) {
+    return (
+      <SvgIcon {...props}>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </SvgIcon>
+    );
+  }
   
 
 /* const label = { inputProps: { 'aria-label': 'Switch demo' } }; */
@@ -74,48 +86,49 @@ const Sidebar = () => {
     
   return (
     <>
+      <aside className="absolute font-black text-white md:hidden">
+          <nav className={`relative ${open? 'w-[350px]': 'w-[80px]'} ${open? 'bg-gray-800': 'bg-gray-500'}  h-screen z-1 duration-500`}>
+              <div className='flex justify-end ml-[320px] mb-10'>
+              <FormControlLabel 
+                  onClick = {() =>{setopen(!open);}}
+                  className={`${open? 'ml-[50px]': 'mr-[240px]'} duration-500 mt-3`}
+                  control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+                  label=""/>
+              </div>
 
-        <aside className="absolute font-black text-white md:hidden">
-            <nav className={`relative ${open? 'w-[350px]': 'w-[80px]'} bg-gray-600 h-screen z-1 duration-500`}>
-                <div className='flex justify-end ml-[320px]'>
-                <FormControlLabel 
-                    onClick = {() =>{setopen(!open);}}
-                    className={`${open? 'ml-[50px]': 'mr-[240px]'} duration-500`}
-                    control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-                    label=""/>
-                    
-                </div>
-            
-                
-                <div className='flex'>
-                    <Image className="mt-20 rounded m-5" width={25} height={25} src={view.src} alt="logo" />
-                    <h1 className='mt-20 text-5xl p-5'>Logo</h1>
-                </div>
+              <div className='flex justify-around '>
+                  <Image className="size-14 rounded-lg mr-10 ml-3" width={25} height={25} src={logo.src} alt="..." />
+                  <h1 className='text-5xl p-1'>Logo</h1>
+              </div>
 
-                <ul className='mt-10 text-center text-4xl flex-col gap-10'>
+              <ul className='mt-10 text-center text-3xl flex-col gap-10'>
                 <li className='mb-10'>
-                    <Link href="/" className=''>
+                    <Link href="/" className='flex justify-around'>
+                    <HomeIcon className="size-12 mr-10 ml-3" />
                     <p>home</p>
                     </Link>
                 </li>
                 <li className='mb-10'>
-                    <Link href="/about">
+                    <Link href="/about" className='flex justify-around'>
+                    <SupervisedUserCircleIcon className="size-12 mr-10 ml-3" />
                         <p>about</p>
                     </Link>
                 </li>
                 <li className='mb-10'>
-                    <Link href="/contact">
+                    <Link href="/contact" className='flex justify-around'>
+                    <PhoneIcon className="size-12 mr-10 ml-3" />
                         <p>contact</p>
                     </Link>
                 </li>
-                <li className='mb-10'>
-                    <Link href="/blog">
+                <li className='mb-10' >
+                    <Link href="/blog" className='flex justify-around'>
+                      <ShareIcon className="size-12 mr-10 ml-3" />
                         <p>blog</p>
                     </Link>
                 </li>
-                </ul>
-            </nav>
-        </aside>
+              </ul>
+          </nav>
+      </aside>
     </>
   );
 };

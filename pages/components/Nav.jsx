@@ -23,7 +23,7 @@ function Nav() {
     <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 truncate md:flex md:font-bold" >
       <div className="flex gap-x-6 justify-between">
         <span className="text-6xl text-white flex">Logo
-          <Image className="size-16 rounded-lg ml-10" width={25} height={25} src={logo.src} alt="..." />
+          <Image className="size-16 rounded-lg ml-10" width={25} height={25} src={logo.src} alt="logo" />
         </span>
         
         <ToggleButton value="justify" key="justify" className="text-white border-2 border-white rounded-xl md:hidden" onClick={toggleMenu}>

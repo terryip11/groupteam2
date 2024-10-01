@@ -1,10 +1,8 @@
 import "../../app/globals.css";
 import React from 'react';
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
-import Slideimg from '../components/slideimg';
-
+import Footer from '../components/Footer';
 
 function Home() {
   
@@ -13,7 +11,6 @@ function Home() {
     <>
       <Nav />
       <Sidebar />
-      <Slideimg />
       <Footer />
     </>
   );
