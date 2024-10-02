@@ -7,6 +7,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 
+
 const Footer = () => {
     return (
       <footer className="bg-gray-800 text-white p-4 absolute bottom-[-1] w-full">
