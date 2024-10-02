@@ -25,9 +25,11 @@ return(
       <ul>
         {clubs.map((club) => (
           <li key={club.id}>
-            <h2>{club.name}</h2>
+            <div className="">
+            <h2>{club.name}</h2>  
+            </div>
+            
             <p>{club.description}</p>
-            <p>{club.info}</p>
           </li>
         ))}
       </ul>
