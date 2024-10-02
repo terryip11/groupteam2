@@ -3,7 +3,7 @@ import React from 'react';
 import Nav from '../components/Nav';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-
+import SlideImg from '../components/SlideImg';
 function Home() {
   
 
@@ -11,6 +11,7 @@ function Home() {
     <>
       <Nav />
       <Sidebar />
+      <SlideImg />
       <Footer />
     </>
   );

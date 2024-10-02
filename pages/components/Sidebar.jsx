@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Switch from '@mui/material/Switch';
-/* import view from "../../public/images/view.jpg"; */
 import 'tailwindcss/tailwind.css';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -98,32 +97,32 @@ const Sidebar = () => {
 
               <div className='flex justify-around '>
                   <Image className="size-14 rounded-lg mr-10 ml-3" width={25} height={25} src={logo.src} alt="..." />
-                  <h1 className='text-5xl p-1'>Logo</h1>
+                  <h1 className={`${open? 'block': 'hidden'} text-5xl p-1`}>Logo</h1>
               </div>
 
               <ul className='mt-10 text-center text-3xl flex-col gap-10'>
                 <li className='mb-10'>
                     <Link href="/" className='flex justify-around'>
                     <HomeIcon className="size-12 mr-10 ml-3" />
-                    <p>home</p>
+                    <p className={`${open? 'block': 'hidden'}`}>home</p>
                     </Link>
                 </li>
                 <li className='mb-10'>
                     <Link href="/about" className='flex justify-around'>
                     <SupervisedUserCircleIcon className="size-12 mr-10 ml-3" />
-                        <p>about</p>
+                        <p className={`${open? 'block': 'hidden'}`}>about</p>
                     </Link>
                 </li>
                 <li className='mb-10'>
                     <Link href="/contact" className='flex justify-around'>
                     <PhoneIcon className="size-12 mr-10 ml-3" />
-                        <p>contact</p>
+                        <p className={`${open? 'block': 'hidden'}`}>contact</p>
                     </Link>
                 </li>
                 <li className='mb-10' >
                     <Link href="/blog" className='flex justify-around'>
                       <ShareIcon className="size-12 mr-10 ml-3" />
-                        <p>blog</p>
+                        <p className={`${open? 'block': 'hidden'}`}>blog</p>
                     </Link>
                 </li>
               </ul>

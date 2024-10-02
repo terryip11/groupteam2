@@ -20,14 +20,11 @@ const picshow = () => {
 
   return (
     <div>
-      {/* <Image src={images[keys[currentIndex]]} /> */}
         <Image
-          /* key={index} */
           src={images[currentIndex]}
-          /* alt={`Image ${index + 1}`} */
           width={1000}
           height={1000}
-          style={{ width: '95%', height: '90vh', padding: '40px' }}
+          style={{ width: '100%', height: '90vh', padding: '10px' }}
         />
     </div>
   );
