@@ -1,6 +1,6 @@
 import "../../app/globals.css";
 import { useState, useEffect } from "react";
-import logo from "../../public/images/logo.png";
+import logo from '../../public/images/logo.png';
 import Link from "next/link";
 import Image from "next/image";
 

@@ -21,7 +21,7 @@ useEffect(() =>{
 return(
     <>
     <div>
-      <h1>博文列表測試</h1>
+      <h1>酒吧資料</h1>
       <ul>
         {clubs.map((club) => (
           <li key={club.id}>
