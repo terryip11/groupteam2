@@ -1,12 +1,9 @@
 import React from 'react';
 
-import Card from '@mui/material/Card';
-
-
  function test() {
   return (
     <>
-      
+      <h1>hello</h1>
     </>
   )
 }
