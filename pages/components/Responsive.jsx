@@ -6,6 +6,8 @@ export default function Responsive() {
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Image
         alt="Mountains"
+        width={1000}
+        height={1000}
         // Importing an image will
         // automatically set the width and height
         src={mountains}

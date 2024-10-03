@@ -13,13 +13,9 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
-<<<<<<< HEAD
     "@react-google-maps/api": "^2.19.3",
     "autosuggest-highlight": "^3.3.4",
-=======
-    "bcrypt": "^5.1.1",
     "mongodb": "^6.9.0",
->>>>>>> 0a4653426f6064ae7d608884095d467137abc050
     "next": "^14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
