@@ -1,9 +1,15 @@
 import React from 'react';
+import ScrollDialog from '../components/Scrolling_content';
+import Responsive from '../components/Responsive';
+import GoogleMaps from '../components/google_map_place';
+import GoogleMapComponent from '../components/GoogleMapComponent';
 
  function test() {
   return (
     <>
-      <h1>hello</h1>
+      <ScrollDialog />
+      <Responsive/>
+      <GoogleMapComponent/>
     </>
   )
 }
