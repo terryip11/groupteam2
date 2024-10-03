@@ -1,11 +1,15 @@
 import React from 'react';
-import Login from '../components/Login';
+import ScrollDialog from '../components/Scrolling_content';
+import Responsive from '../components/Responsive';
+import GoogleMapComponent from '../components/GoogleMapComponent';
 
 
 function test() {
   return (
     <>
-      <Login />
+      <ScrollDialog />
+      <Responsive/>
+      <GoogleMapComponent/>
     </>
   )
 }
