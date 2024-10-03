@@ -27,8 +27,7 @@ return(
           <li key={club.id}>
             <h2>{club.name}</h2>
             <p>{club.description}</p>
-            {/* <p>{club.contact_info.phone}</p>
-            <p>{club.contact_info.website}</p> */}
+            
           </li>
         ))}
       </ul>
