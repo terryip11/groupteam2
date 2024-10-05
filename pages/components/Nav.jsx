@@ -37,13 +37,13 @@ function Nav() {
         <Link href="/">首頁</Link>
         </li>
 
-        <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">Contact Us
+        <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">Venue
         
-          <div className="hidden absolute bg-blue-500 z-50 group-hover:block top-9 w-40" >
-            <Link href="#" className="block">酒吧名1</Link>
-            <Link href="#" className="block">酒吧名2</Link>
-            <Link href="#" className="block">酒吧名3</Link>
-            <Link href="#" className="block">酒吧名4</Link>
+          <div className="hidden absolute bg-gray-500 z-50 group-hover:block top-9 w-40" >
+            <Link href="#" className="block mt-2 hover:bg-blue-500">酒吧名1</Link>
+            <Link href="#" className="block mt-2 hover:bg-blue-500">酒吧名2</Link>
+            <Link href="#" className="block mt-2 hover:bg-blue-500">酒吧名3</Link>
+            <Link href="#" className="block mt-2 hover:bg-blue-500">酒吧名4</Link>
           </div>
         </li>
 
@@ -54,7 +54,7 @@ function Nav() {
           <Link href="/">test</Link>
         </li>
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
-          <Link href="/">next</Link>
+          <Link href="/">註册</Link>
         </li>
       </ul>
     </nav>
