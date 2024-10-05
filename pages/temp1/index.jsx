@@ -9,12 +9,7 @@ function Home() {
   
 
   return (
-    <div Style={{
-        Display:'flex',
-        flexdirection:'row',
-        Height:'50vh',
-        padding:'30px',
-    }}>
+    <div>
 
       <Nav />
       <Sidebar />

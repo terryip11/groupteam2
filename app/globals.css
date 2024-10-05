@@ -35,3 +35,8 @@ body {
   cursor: pointer;
 }
 
+/* 集合寫法 */
+/* .containernav {
+  @apply 
+}
+ */

@@ -5,6 +5,7 @@ import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import ToggleButton from '@mui/material/ToggleButton';
 import Image from "next/image";
 import Link from "next/link";
+import { Block } from "@mui/icons-material";
 
 
 function Nav() {
@@ -20,7 +21,7 @@ function Nav() {
 
   return (
     <>
-    <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 truncate md:flex md:font-bold" >
+    <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 md:flex md:font-bold;" >
       <div className="flex gap-x-6 justify-between">
         <span className="text-6xl text-white flex">Logo
           <Image className="size-16 rounded-full ml-10" width={25} height={25} src={logo.src} alt="logo" />
@@ -35,9 +36,17 @@ function Nav() {
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
         <Link href="/">首頁</Link>
         </li>
-        <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
-          <Link href="/">contact</Link>
+
+        <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">Contact Us
+        
+          <div className="hidden absolute bg-blue-500 z-50 group-hover:block top-9 w-40" >
+            <Link href="#" className="block">酒吧名1</Link>
+            <Link href="#" className="block">酒吧名2</Link>
+            <Link href="#" className="block">酒吧名3</Link>
+            <Link href="#" className="block">酒吧名4</Link>
+          </div>
         </li>
+
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
           <Link href="/">blog</Link>
         </li>
