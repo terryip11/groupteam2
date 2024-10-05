@@ -12,12 +12,8 @@ function Nav() {
   const [isMenuOpen, setIsMemuOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowPopup(true);
-  };
-
-  const handleClosePopup = () => {
-    setShowPopup(false);
+  const handleToggle = () => {
+    setShowPopup(!showPopup);
   };
 
   const toggleMenu = ()=>{
@@ -30,7 +26,7 @@ function Nav() {
 
   return (
     <>
-    <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 md:flex md:font-bold;" >
+    <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 md:flex md:font-bold" >
       <div className="flex gap-x-6 justify-between">
         <span className="text-6xl text-white flex">Logo
           <Image className="size-16 rounded-full ml-10" width={25} height={25} src={logo.src} alt="logo" />
@@ -71,11 +67,11 @@ function Nav() {
           <Link href="/">test</Link>
         </li>
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
-          <button onClick={handleButtonClick} className="login-popup">註册</button>
+          <button onClick={handleToggle} className="login-popup">註册</button>
         </li>
       </ul>
     </nav>
-    {showPopup && (<PopupLogin onClose={handleClosePopup}/>)}
+    {showPopup && (<PopupLogin handleToggle={handleToggle}/>)}
     
     
     </>

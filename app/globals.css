@@ -37,7 +37,6 @@ body {
 
 /* Wrapper PART START */
 .wrapper {
-  z-index: 50;
   position: relative;
   width: 400px;
   height: 440px;
@@ -50,7 +49,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: scale(1);
+  transform: scale(0);
   transition: transform 0.5s ease, height 0.2s ease;
 }
 .wrapper.active-popup {
@@ -140,7 +139,7 @@ body {
 .remember-forgot {
   font-size: 0.9em;
   color: black;
-  font-weight: 550;
+  font-weight: 500;
   margin: -15px 0 15px;
   display: flex;
   justify-content: space-between;

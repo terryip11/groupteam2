@@ -4,14 +4,16 @@ import '../../app/globals.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
 
-export default function PopupLogin() {
+
+
+export default function PopupLogin({handleToggle}) {
     useEffect(() => {
         const wrapper = document.querySelector('.wrapper');
         const loginLink = document.querySelector('.login-link');
         const registerLink = document.querySelector('.register-link');
         const btnPopup = document.querySelector('.btnLogin-popup');
         const iconClose = document.querySelector('.icon-close');
-    
+
         if (registerLink) {
           registerLink.addEventListener('click', () => {
             wrapper.classList.add('active');
@@ -71,7 +73,7 @@ export default function PopupLogin() {
     </Head>
 
 
-      <div className="wrapper">
+      <div className={`wrapper ${handleToggle? 'active-popup' : 'wrapper'}`}>
         <span className="icon-close"><ion-icon name="close-outline"></ion-icon></span>
         
         <div className="form-box login"><h1>Login</h1>
@@ -129,7 +131,6 @@ export default function PopupLogin() {
                     </div>
             </form>
         </div>
-
     </div>
     </>
   )
