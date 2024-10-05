@@ -4,14 +4,15 @@ import Nav from '../components/Nav';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import SlideImg from '../components/SlideImg';
-function Home() {
-  
+import VideoPlayer from '../components/VideoPlayer';
 
+function Home() {
   return (
     <>
       <Nav />
       <Sidebar />
       <SlideImg />
+      <VideoPlayer />
       <Footer />
     </>
   );

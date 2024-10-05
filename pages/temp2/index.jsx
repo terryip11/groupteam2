@@ -5,7 +5,6 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import ClubDescription from '../components/ClubDescription';
 
-
 function Temp2() {
     return (
         <>

@@ -19,7 +19,11 @@
     "next": "^14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
     "tw-elements": "^2.0.0"
+=======
+    "tw-elements-react": "^1.0.0-alpha-end"
+>>>>>>> 5dd5b458564c3fb4251e9472ff0a37c11d5d917e
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
