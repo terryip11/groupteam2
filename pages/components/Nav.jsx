@@ -5,12 +5,21 @@ import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import ToggleButton from '@mui/material/ToggleButton';
 import Image from "next/image";
 import Link from "next/link";
-import { Block } from "@mui/icons-material";
+import PopupLogin from "./PopupLogin";
 
 
 function Nav() {
   const [isMenuOpen, setIsMemuOpen] = useState(false);
-  
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   const toggleMenu = ()=>{
     setIsMemuOpen(!isMenuOpen);
   };
@@ -62,10 +71,13 @@ function Nav() {
           <Link href="/">test</Link>
         </li>
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
-          <button href="/" className="login-popup">註册</button>
+          <button onClick={handleButtonClick} className="login-popup">註册</button>
         </li>
       </ul>
     </nav>
+    {showPopup && (<PopupLogin onClose={handleClosePopup}/>)}
+    
+    
     </>
     )
 }
