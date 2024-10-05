@@ -1,10 +1,11 @@
 import React from 'react';
-import Slidevideo from '../components/Slidevideo';
+//import Slidevideo from '../components/Slidevideo';
+import PopupLogin from '../components/PopupLogin';
 function test() {
   return (
     <>
-      
-      <Slidevideo />
+      <PopupLogin />
+      {/* <Slidevideo /> */}
     </>
   )
 }

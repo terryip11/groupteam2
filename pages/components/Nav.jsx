@@ -34,7 +34,7 @@ function Nav() {
 
       <ul className={`font-bold text-white ${isMenuOpen ? 'block':'hidden'} md:flex md:items-center md:gap-x-10`}>
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
-        <Link href="/">首頁</Link>
+          <Link href="/">首頁</Link>
         </li>
 
         <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">Venue
@@ -62,7 +62,7 @@ function Nav() {
           <Link href="/">test</Link>
         </li>
         <li className="mt-8 md:mt-0 text-center hover:bg-blue-500 rounded-lg">
-          <Link href="/">註册</Link>
+          <button href="/" className="login-popup">註册</button>
         </li>
       </ul>
     </nav>
