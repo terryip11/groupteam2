@@ -9,11 +9,16 @@ import VideoPlayer from '../components/VideoPlayer';
 function Home() {
   return (
     <>
-      <Nav />
-      <Sidebar />
-      <SlideImg />
-      <VideoPlayer />
-      <Footer />
+      <div className="">
+        <Nav className="" />
+        <Sidebar className="" />
+        <SlideImg />
+        <VideoPlayer />
+        <Footer />
+      </div>
+      
+    
+      
     </>
   );
 }

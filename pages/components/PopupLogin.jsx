@@ -14,6 +14,9 @@ export default function PopupLogin({handleToggle}) {
         const btnPopup = document.querySelector('.btnLogin-popup');
         const iconClose = document.querySelector('.icon-close');
 
+
+
+        // 添加事件監聽器
         if (registerLink) {
           registerLink.addEventListener('click', () => {
             wrapper.classList.add('active');
@@ -73,7 +76,7 @@ export default function PopupLogin({handleToggle}) {
     </Head>
 
 
-      <div className={`wrapper ${handleToggle? 'active-popup' : 'wrapper'}`}>
+      <div className={`wrapper ${handleToggle? 'active-popup' : 'wrapper'} mx-auto mt-3`}>
         <span className="icon-close"><ion-icon name="close-outline"></ion-icon></span>
         
         <div className="form-box login"><h1>Login</h1>
