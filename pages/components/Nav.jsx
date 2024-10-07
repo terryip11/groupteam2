@@ -15,10 +15,10 @@ function Nav() {
   return (
     <>
     <div className="relative"> 
-      <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 md:flex md:font-bold" >
+      <nav className="justify-between text-3xl p-5 px-10 bg-red-500 md:flex md:font-bold" >
         <div className="flex gap-x-6 justify-between">
           <span className="text-6xl text-white flex">Logo
-            <Image className="size-16 rounded-full ml-10" width={25} height={25} src={logo.src} alt="logo" />
+            <Image className="size-16 rounded-full ml-10" width={1000} height={1000} src={logo.src} alt="logo" />
           </span>
         </div>
 

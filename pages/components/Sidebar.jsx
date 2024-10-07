@@ -85,7 +85,7 @@ const Sidebar = () => {
     
   return (
     <>
-      <aside className="absolute font-black text-white md:hidden">
+      <aside className="absolute font-black text-red-400 md:hidden">
           <nav className={`relative ${open? 'w-[350px]': 'w-[80px]'} ${open? 'bg-gray-800': 'bg-gray-500'}  h-screen z-1 duration-500`}>
               <div className='flex justify-end ml-[320px] mb-10'>
               <FormControlLabel 
