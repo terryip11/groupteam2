@@ -30,10 +30,10 @@ const picshow = () => {
           width={1000}
           height={1000}
           alt="Logo"
-          style={{ width: '100%', height: '90vh', padding: '10px' }}
+          className='size-11/12 md:p-2.5 md:m-auto'
         />
     </div>
   );
 };
-
+/* width: '100%', height: '90vh', padding: '10px' */
 export default picshow;
