@@ -14,17 +14,19 @@ function Nav() {
 
   return (
     <>
+        <div className="flex gap-x-6 justify-between">
+        <Image className="size-16 rounded-full ml-10" width={25} height={25} src={logo.src} alt="logo" />
+          
+          <span className="text-6m text-white flex">Rock Entertinment LTD
+          </span>
+
+        </div>
     <div className="relative"> 
       <nav className="justify-between text-3xl p-5 px-10 bg-gray-500 md:flex md:font-bold" >
-        <div className="flex gap-x-6 justify-between">
-          <span className="text-6xl text-white flex">Logo
-            <Image className="size-16 rounded-full ml-10" width={25} height={25} src={logo.src} alt="logo" />
-          </span>
-        </div>
 
         <ul className="hidden font-bold text-white md:flex md:items-center md:gap-x-10">
           <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-            <Link href="/">首頁</Link>
+            <Link href="/">Home</Link>
           </li>
 
           <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">Venue

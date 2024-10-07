@@ -15,19 +15,19 @@ const Footer = () => {
           <div className='flex'>
             <Image src={logo.src} alt="logo" width={120} height={120} className='rounded-full mr-10' />
             <div className='text-xl'>
-              <p>公司地址:leomore</p>
-              <p>電子郵箱:leomore</p>
-              <p>電話:852-12345678</p>
-              <p>傳真:852-12345678</p>
+              <p>Address: 81 Austin Road, Tsim Sha Tsui</p>
+              <p>E-mail: aeltd@gmail.com</p>
+              <p>Phone: 852 2730 5653</p>
+              <p>Fax: 852 2736 0612</p>
             </div>
           </div>
 
 
           <div className="">
             <ul className="md:flex md:space-x-5 text-2xl mb-5">
-              <li><Link href="#" className="hover:text-gray-400">關於我們</Link></li>
-              <li><Link href="#" className="hover:text-gray-400">聯繫我們</Link></li>
-              <li><Link href="#" className="hover:text-gray-400">隱私政策</Link></li>
+              <li><Link href="#" className="hover:text-gray-400">About Us</Link></li>
+              <li><Link href="#" className="hover:text-gray-400">Contact Us</Link></li>
+              <li><Link href="#" className="hover:text-gray-400">Academy</Link></li>
             </ul>
 
             <ul className='flex gap-7 m-auto'>
@@ -57,7 +57,7 @@ const Footer = () => {
         
         <div className='text-center text-xl w-full' >
           
-            <p>© 2024 您的公司名稱. 保留所有權利。</p>
+            <p>© Copyright 1999-2024 by Refsnes Data. All Rights Reserved.</p>
         </div>
 
       </footer>
