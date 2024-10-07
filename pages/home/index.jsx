@@ -13,7 +13,6 @@ function Home() {
         <Nav className="" />
         <Sidebar className="" />
         <SlideImg />
-        <VideoPlayer />
         <Footer />
       </div>
       
