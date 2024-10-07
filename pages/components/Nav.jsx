@@ -1,7 +1,6 @@
 import "../../app/globals.css";
 import { useState } from "react";
-import logo from "../../public/images/logo.png";
-import Image from "next/image";
+import logo from '../../public/images/rock-and-roll-music-Poster.jpg';import Image from "next/image";
 import Link from "next/link";
 import PopupLogin from "./PopupLogin";
 

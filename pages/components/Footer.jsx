@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../public/images/logo.png';
+import logo from '../../public/images/rock-and-roll-music-Poster.jpg';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
