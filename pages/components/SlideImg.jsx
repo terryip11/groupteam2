@@ -30,7 +30,7 @@ const picshow = () => {
           width={1000}
           height={1000}
           alt="Logo"
-          className='size-11/12 md:p-2.5 md:m-auto'
+          className='size-full md:p-2.5 md:m-auto'
         />
     </div>
   );
