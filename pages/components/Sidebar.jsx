@@ -5,12 +5,10 @@ import Switch from '@mui/material/Switch';
 import 'tailwindcss/tailwind.css';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Image from 'next/image';
 import SvgIcon from '@mui/material/SvgIcon';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ShareIcon from '@mui/icons-material/Share';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
-import logo from "../../public/images/logo.png";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -85,8 +83,8 @@ const Sidebar = () => {
     
   return (
     <>
-      <aside className="absolute font-black text-red-400 md:hidden">
-          <nav className={`relative ${open? 'w-[350px]': 'w-[80px]'} ${open? 'bg-gray-800': 'bg-gray-500'}  h-screen z-1 duration-500`}>
+      <aside className="fixed top-0 left-0 font-black text-green-400 md:hidden">
+          <nav className={`sticky ${open? 'w-[350px]': 'w-[80px]'} ${open? 'bg-gray-500': 'bg-gray-500'}  h-[100vh] z-1 duration-500`}>
               <div className='flex justify-end ml-[320px] mb-10'>
               <FormControlLabel 
                   onClick = {() =>{setopen(!open);}}
@@ -96,33 +94,32 @@ const Sidebar = () => {
               </div>
 
               <div className='flex justify-around '>
-                  <Image className="size-14 rounded-lg mr-10 ml-3" width={25} height={25} src={logo.src} alt="..." />
-                  <h1 className={`${open? 'block': 'hidden'} text-5xl p-1`}>Logo</h1>
+                  <h1 className={`${open? 'block': 'hidden'} text-5xl p-1`}>Menu</h1>
               </div>
 
-              <ul className='mt-10 text-center text-3xl flex-col gap-10'>
+              <ul className='textstyle mt-20 text-center text-3xl text-white flex-col gap-10'>
                 <li className='mb-10'>
                     <Link href="/" className='flex justify-around'>
                     <HomeIcon className="size-12 mr-10 ml-3" />
-                    <p className={`${open? 'block': 'hidden'}`}>home</p>
+                    <p className={`${open? 'block': 'hidden'} hover:text-green-500`}>About Us</p>
                     </Link>
                 </li>
                 <li className='mb-10'>
                     <Link href="/about" className='flex justify-around'>
                     <SupervisedUserCircleIcon className="size-12 mr-10 ml-3" />
-                        <p className={`${open? 'block': 'hidden'}`}>about</p>
+                        <p className={`${open? 'block': 'hidden'} hover:text-green-500`}>Venue</p>
                     </Link>
                 </li>
                 <li className='mb-10'>
                     <Link href="/contact" className='flex justify-around'>
                     <PhoneIcon className="size-12 mr-10 ml-3" />
-                        <p className={`${open? 'block': 'hidden'}`}>contact</p>
+                        <p className={`${open? 'block': 'hidden'} hover:text-green-500`}>Terms</p>
                     </Link>
                 </li>
                 <li className='mb-10' >
                     <Link href="/blog" className='flex justify-around'>
                       <ShareIcon className="size-12 mr-10 ml-3" />
-                        <p className={`${open? 'block': 'hidden'}`}>blog</p>
+                        <p className={`${open? 'block': 'hidden'} hover:text-green-500`}>Contact Us</p>
                     </Link>
                 </li>
               </ul>
