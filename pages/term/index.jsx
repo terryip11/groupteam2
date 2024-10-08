@@ -15,7 +15,7 @@ function Term() {
                 <h1 className="text-3xl font-bold mb-4 text-center md:underline">
                     Terms and Conditions for Booking Music Venues
                 </h1>
-                <div className="prose prose-lg">
+                <div className="prose prose-lg ">
                     <p className="text-center">
                         Introduction:
                         These Terms and Conditions govern the booking of music venues through Rock Entertainment Ltd. By booking any of the listed venues, you agree to comply with these terms.
