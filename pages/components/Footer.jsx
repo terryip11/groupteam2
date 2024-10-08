@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="mx-auto flex justify-between items-center">
           <div className='flex'>
             <Image src={logo.src} alt="logo" width={120} height={120} className='rounded-full mr-10' />
-            <div className='text-xl'>
+            <div className='text-xl hover:text-green-400'>
               <p>Address: 81 Austin Road, Tsim Sha Tsui</p>
               <p>E-mail: aeltd@gmail.com</p>
               <p>Phone: 852 2730 5653</p>
@@ -23,11 +23,11 @@ const Footer = () => {
           </div>
 
 
-          <div className="">
+          <div className="textstyle text-bold">
             <ul className="md:flex md:space-x-5 text-2xl mb-5">
-              <li><Link href="#" className="hover:text-gray-400">About Us</Link></li>
-              <li><Link href="#" className="hover:text-gray-400">Contact Us</Link></li>
-              <li><Link href="#" className="hover:text-gray-400">Academy</Link></li>
+              <li><Link href="#" className="hover:text-green-400">About Us</Link></li>
+              <li><Link href="#" className="hover:text-green-400">Contact Us</Link></li>
+              <li><Link href="#" className="hover:text-green-400">Academy</Link></li>
             </ul>
 
             <ul className='flex gap-7 m-auto'>
@@ -57,7 +57,7 @@ const Footer = () => {
         
         <div className='text-center text-xl w-full' >
           
-            <p>© Copyright 1999-2024 by Refsnes Data. All Rights Reserved.</p>
+            <p className='hover:text-green-400 hover:text-5xl duration-500'>© Copyright 1999-2024 by Refsnes Data. All Rights Reserved.</p>
         </div>
 
       </footer>
