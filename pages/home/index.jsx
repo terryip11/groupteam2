@@ -1,24 +1,9 @@
-import "../../app/globals.css";
-import React from 'react';
-import Nav from '../components/Nav';
-import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
-import SlideImg from '../components/SlideImg';
-import VideoPlayer from '../components/VideoPlayer';
+import React from 'react'
 
-function Home() {
+export default function home() {
   return (
-    <>
-      <div className="">
-        <Nav className="" />
-        <Sidebar className="" />
-        <SlideImg />
-        <Footer />
-      </div>
+    <div>
       
-    
-      
-    </>
-  );
+    </div>
+  )
 }
-export default Home;

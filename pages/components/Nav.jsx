@@ -55,10 +55,10 @@ function Nav() {
             </li>
 
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">blog</Link>
+              <Link href="/">Terms</Link>
             </li>
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">test</Link>
+              <Link href="/">Contact Us</Link>
             </li>
           </ul>
           <div className="flex mx-auto md:mr-20">
