@@ -9,9 +9,8 @@ const YouTubeVideoList = [
     '3LRqm5eybbg',
     '_RsKHmbDkOg',
     'TlUXoJxyhnM',
-    'video_id_11',
-    'video_id_12'
+    'pMf-X8DONb8',
+    'yzJcqmOzadE'
 ];
 
 export default YouTubeVideoList;
-
