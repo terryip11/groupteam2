@@ -9,12 +9,7 @@ function Home() {
   
 
   return (
-    <div Style={{
-        Display:'flex',
-        flexdirection:'row',
-        Height:'50vh',
-        padding:'30px',
-    }}>
+    <>
 
       <Nav />
       <Sidebar />
@@ -26,7 +21,8 @@ function Home() {
       </div>
       
       <Footer />
-    </div>
-  );
+    </>
+    );
 }
+
 export default Home;
