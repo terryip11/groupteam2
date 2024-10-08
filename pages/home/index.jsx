@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import SlideImg from '../components/SlideImg';
 import VideoPlayer from '../components/VideoPlayer';
+import YouTubeVideoList from '../components/YouTubeVideoList';
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
       <div className="">
         <Nav className="" />
         <Sidebar className="" />
-        <SlideImg />
+        <VideoPlayer videoIds={YouTubeVideoList} />       
         <Footer />
       </div>
       

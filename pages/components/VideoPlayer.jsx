@@ -1,64 +1,68 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-const VideoPlayer = () => {
-    const videoRef = useRef(null);
+
+const VideoPlayer = ({ videoIds }) => {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const iframeRefs = useRef([]);
+    const intervalRef = useRef(null);
 
-    // Add your video URLs here
-    const videoUrls = [
-        'https://drive.google.com/file/d/116XbvIl8CA1RcupLqgioK28KJUuxRn5L/view?usp=drive_link',
-        'https://drive.google.com/file/d/1Bbb9uw9eaUH7q5NEx_5H_DW59dCcfUXD/view?usp=drive_link',
-        'https://example.com/video3.mp4',
-    ];
+    useEffect(() => {
+        // Set the interval to switch videos every 15 seconds
+        intervalRef.current = setInterval(() => {
+            if (isAutoPlaying) {
+                handleNextVideo();
+            }
+        }, 15000);
 
-    const handleVideoChange = (index) => {
-        setCurrentVideoIndex(index);
-        if (videoRef.current) {
-            videoRef.current.load();
-            videoRef.current.play();
-        }
+        // Cleanup function
+        return () => {
+            clearInterval(intervalRef.current);
+        };
+    }, [isAutoPlaying]);
+
+    const handleNextVideo = () => {
+        const nextIndex = (currentVideoIndex + 1) % videoIds.length;
+        setCurrentVideoIndex(nextIndex);
+    };
+
+    const handlePrevVideo = () => {
+        const prevIndex = (currentVideoIndex - 1 + videoIds.length) % videoIds.length;
+        setCurrentVideoIndex(prevIndex);
+    };
+
+    const handleVideoPause = () => {
+        setIsAutoPlaying(false);
+        clearInterval(intervalRef.current);
+    };
+
+    const handleVideoEnded = () => {
+        handleNextVideo();
     };
 
     return (
-        <div className="video-player">
-            <video ref={videoRef} controls width="100%" height="auto">
-                <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div className="video-controls">
-                {videoUrls.map((url, index) => (
-                    <button
-                        key={index}
-                        onClick={() => handleVideoChange(index)}
-                        className={currentVideoIndex === index ? 'active' : ''}
-                    >
-                        Video {index + 1}
-                    </button>
-                ))}
-            </div>
-            <style jsx>{`
-        .video-player {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        .video-controls {
-          display: flex;
-          justify-content: center;
-          margin-top: 1rem;
-        }
-        button {
-          margin: 0 0.5rem;
-          padding: 0.5rem 1rem;
-          background-color: #f0f0f0;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-        button.active {
-          background-color: #007bff;
-          color: white;
-        }
-      `}</style>
+        <div className="video-container">
+            {videoIds.map((videoId, index) => (
+                <iframe
+                    key={videoId}
+                    ref={(el) => (iframeRefs.current[index] = el)}
+                    className={index === currentVideoIndex ? 'active' : 'hidden'}
+                    width="560"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=${index === currentVideoIndex ? 1 : 0}&enablejsapi=1`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            ))}
+            <button id="prev-btn" onClick={handlePrevVideo}>
+            <ArrowBackIcon /> 
+            </button>
+            <button id="next-btn" onClick={handleNextVideo}>
+            <ArrowForwardIcon />            
+            </button>
         </div>
     );
 };
