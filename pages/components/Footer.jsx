@@ -27,7 +27,11 @@ const Footer = () => {
             <ul className="md:flex md:space-x-5 text-2xl mb-5">
               <li><Link href="#" className="hover:text-green-400">About Us</Link></li>
               <li><Link href="#" className="hover:text-green-400">Contact Us</Link></li>
+<<<<<<< HEAD
               <li><Link href="/term" className="hover:text-green-400">Terms</Link></li>
+=======
+              <li><Link href="./" className="hover:text-green-400">Terms</Link></li>
+>>>>>>> refs/remotes/origin/main
             </ul>
 
             <ul className='flex gap-7 m-auto'>
