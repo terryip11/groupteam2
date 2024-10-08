@@ -15,7 +15,7 @@ const VideoPlayer = ({ videoIds }) => {
             if (isAutoPlaying) {
                 handleNextVideo();
             }
-        }, 15000);
+        }, 10000);
 
         // Cleanup function
         return () => {
@@ -33,20 +33,21 @@ const VideoPlayer = ({ videoIds }) => {
         setCurrentVideoIndex(prevIndex);
     };
 
-    const handleVideoPause = () => {
+   /*  const handleVideoPause = () => {
         setIsAutoPlaying(false);
         clearInterval(intervalRef.current);
     };
 
     const handleVideoEnded = () => {
         handleNextVideo();
-    };
+    }; */
 
     return (
         <div className="video-container">
             <div className="video-wrapper">
                 {videoIds.map((videoId, index) => (
                     <iframe
+                        
                         key={videoId}
                         ref={(el) => (iframeRefs.current[index] = el)}
                         className={index === currentVideoIndex ? 'active' : 'hidden'}
