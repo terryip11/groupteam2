@@ -107,7 +107,7 @@ export default function PopupLogin({handleToggle}) {
         </div>
         {/* other page */}
         <div className="form-box register"><h1>Registration</h1>
-            <form action="#">
+            <form action="">
                 <div className="input-box">
                     <span className="icon"><ion-icon name="person-outline"></ion-icon></span>
                     <input type="text" required />
