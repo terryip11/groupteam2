@@ -3,6 +3,7 @@ import React from 'react';
 import Nav from '../components/Nav';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import ClubDescription from '../components/ClubDescription';
 import GoogleMapComponent from "../components/GoogleMapComponent";
 
 function Home() {
@@ -18,4 +19,5 @@ function Home() {
     </div>
   );
 }
-export default Home;
+
+export default Temp1;
