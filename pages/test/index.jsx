@@ -1,15 +1,15 @@
 import React from 'react';
-import ScrollDialog from '../components/Scrolling_content';
-import Responsive from '../components/Responsive';
-import GoogleMapComponent from '../components/GoogleMapComponent';
-
-
+//import Slidevideo from '../components/Slidevideo';
+import PopupLogin from '../components/PopupLogin';
+import { ShoppingCart } from '@mui/icons-material';
+import Testcomponent from '../components/Testcomponent';
 function test() {
   return (
     <>
-      <ScrollDialog />
-      <Responsive/>
-      <GoogleMapComponent/>
+      <Testcomponent />
+      {/* <PopupLogin /> */}
+      {/* <ShoppingCart /> */}
+      {/* <Slidevideo /> */}
     </>
   )
 }

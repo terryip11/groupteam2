@@ -17,7 +17,6 @@ export default function Responsive() {
           width: '40%',
           height: 'auto',
           position:'relative',
-        
           justifyContent:'center'
         }}
       />

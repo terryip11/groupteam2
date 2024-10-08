@@ -9,7 +9,11 @@ function Home() {
   
 
   return (
+<<<<<<< HEAD
     <>
+=======
+    <div>
+>>>>>>> ccc2c925d6c62dd894b11cc48f93f9a113232412
 
       <Nav />
       <Sidebar />
