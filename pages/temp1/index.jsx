@@ -9,22 +9,20 @@ function Home() {
   
 
   return (
-<<<<<<< HEAD
     <>
-=======
-    <div>
->>>>>>> ccc2c925d6c62dd894b11cc48f93f9a113232412
-
-      <Nav />
-      <Sidebar />
-      {/* <Responsive style={{ flex:1}}/> */}
-      
-      <div className="flex p-10 bg-emerald-200 md:w-[1600px]">
-      <GoogleMapComponent />
-      <p className="ml-10 text-3xl text-white">地址:21654</p>
-      </div>
-      
-      <Footer />
+        <Nav />
+        <Sidebar />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+            <img src="images/TheWanch.jpg" alt="TheWanch" width={800} />
+        </div>
+        {/* <ClubDescription clubId={1} /> */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+            
+        </div>
+        <div>
+        <GoogleMapComponent />
+        </div>
+        <Footer />
     </>
     );
 }
