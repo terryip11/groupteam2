@@ -3,13 +3,13 @@ import React from 'react';
 import Nav from '../components/Nav';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import ClubDescription from '../components/ClubDescription';
 import GoogleMapComponent from "../components/GoogleMapComponent";
 
 function Temp1() {
   
 
   return (
+<<<<<<< HEAD
     <>
         <Nav />
         <Sidebar />
@@ -26,6 +26,16 @@ function Temp1() {
         <Footer />
     </>
     );
+=======
+    <div>
+
+      <Nav />
+      <Sidebar />
+      <GoogleMapComponent />
+      <Footer />
+    </div>
+  );
+>>>>>>> refs/remotes/origin/main
 }
 
 export default Temp1;
