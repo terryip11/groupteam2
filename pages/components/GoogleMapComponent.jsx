@@ -49,13 +49,27 @@ const GoogleMapComponent = () => {
           }}
         />
       </div>
-        <div className='flex justify-end bg-gray-500 p-5'>
+      <div className='flex justify-between items-center bg-gray-500 p-5'>
+        <div className='text-white text-3xl textstyle w-1/2 textstyle hover:text-green-400'>
+          <ClubDescription clubId="1" />
+        </div>
 
-          <div className='text-white text-3xl textstyle mr-10 w-1/2 textstyle hover:text-green-400'>
-            <ClubDescription clubId="1" />
-          </div>
+        <div className='w-1/2'>
+          <iframe 
+            src="https://www.youtube.com/embed/yzJcqmOzadE" 
+            frameBorder="0"
+            width="100%"
+            height="315"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+    </>
+  );
+};
 
-          <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+
+          {/* <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
               <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={initialCenter}
@@ -65,10 +79,10 @@ const GoogleMapComponent = () => {
                 ))}
                 
               </GoogleMap>
-          </LoadScript>
-        </div>
+          </LoadScript> */}
+        {/* </div>
     </>
   );
-};
+}; */}
 
 export default GoogleMapComponent;
