@@ -11,6 +11,15 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        "moveRight": "moveRight 2s ease-in-out infinitee",
+      },
+      keyframes: {
+        moveRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100px)' },
+        },
+      },
     },
   },
   plugins: [require("tw-elements/plugin.cjs")],

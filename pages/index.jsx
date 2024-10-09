@@ -12,7 +12,7 @@ function Home() {
       <div className="">
         <Nav className="" />
         <Sidebar className="" />
-        <VideoPlayer videoIds={YouTubeVideoList} />       
+        <VideoPlayer videoIds={YouTubeVideoList} />
         <Footer />
       </div>
       

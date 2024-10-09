@@ -18,15 +18,16 @@ const centers = [
     { id: 12, lat: 3.1142082977136916, lng: 101.57401157167669 }
 ];
 
-const initialCenter = centers[1];
+const initialCenter = centers[0];
 
 const containerStyle = {
     width: '100%',
-    height: '400px'
+    height: '600px'
 };
 
 const TestGoogle = () => {
     return (
+        <>
         <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
             <GoogleMap
                 mapContainerStyle={containerStyle}
@@ -37,6 +38,10 @@ const TestGoogle = () => {
                 ))}
             </GoogleMap>
         </LoadScript>
+        <div className='mb-1'></div>
+        </>
+        
+
     );
 };
 
