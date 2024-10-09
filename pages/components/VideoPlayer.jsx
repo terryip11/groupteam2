@@ -15,7 +15,7 @@ const VideoPlayer = ({ videoIds }) => {
             if (isAutoPlaying) {
                 handleNextVideo();
             }
-        }, 10000);
+        }, 5000);
 
         // Cleanup function
         return () => {
