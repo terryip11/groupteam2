@@ -33,7 +33,6 @@ const GoogleMapComponent = () => {
       <div className="text-5xl text-center bg-gray-400 text-white">Monkeys</div>
       <div className="flex justify-center">
         <Image
-          className=''
           src={Monkeys.src}
           alt="Mountains"
           width={1000}
@@ -52,7 +51,7 @@ const GoogleMapComponent = () => {
         
         <div className='flex justify-end bg-gray-500 p-5'>
           <div className='text-white text-3xl textstyle mr-10 w-1/2 textstyle hover:text-green-400'>
-            <ClubDescription clubId="1"/>
+            <ClubDescription clubId="1" />
           </div>
         
           <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
@@ -61,7 +60,7 @@ const GoogleMapComponent = () => {
                 center={initialCenter}
                 zoom={20}>
                 {centers.map((location) => (
-                  <Marker position={{ lat: location.lat, lng: location.lng }} key={centers.id} />
+                  <Marker position={{ lat: location.lat, lng: location.lng }} key={location.id} />
                 ))}
                 
               </GoogleMap>
