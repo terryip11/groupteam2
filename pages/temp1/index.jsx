@@ -9,7 +9,6 @@ function Temp1() {
   
 
   return (
-<<<<<<< HEAD
     <>
         <Nav />
         <Sidebar />
@@ -26,16 +25,6 @@ function Temp1() {
         <Footer />
     </>
     );
-=======
-    <div>
-
-      <Nav />
-      <Sidebar />
-      <GoogleMapComponent />
-      <Footer />
-    </div>
-  );
->>>>>>> refs/remotes/origin/main
 }
 
 export default Temp1;
