@@ -15,8 +15,10 @@
     "@mui/material": "^6.1.2",
     "@react-google-maps/api": "^2.19.3",
     "autosuggest-highlight": "^3.3.4",
-<<<<<<< HEAD
+
     "moment": "^2.30.1",
+
+    "dotenv": "^16.4.5",
     "mongoose": "^8.7.0",
     "next": "^14.2.13",
     "react": "^18.3.1",
