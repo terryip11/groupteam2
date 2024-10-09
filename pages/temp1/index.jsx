@@ -9,6 +9,24 @@ function Temp1() {
   
 
   return (
+<<<<<<< HEAD
+    <>
+        <Nav />
+        <Sidebar />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+            <img src="images/TheWanch.jpg" alt="TheWanch" width={800} />
+        </div>
+        {/* <ClubDescription clubId={1} /> */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+            
+        </div>
+        <div>
+        <GoogleMapComponent />
+        </div>
+        <Footer />
+    </>
+    );
+=======
     <div>
 
       <Nav />
@@ -17,6 +35,7 @@ function Temp1() {
       <Footer />
     </div>
   );
+>>>>>>> 5b24207132fa63d41ca0d117d1424da73abf0e06
 }
 
 export default Temp1;
