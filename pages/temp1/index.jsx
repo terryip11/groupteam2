@@ -10,7 +10,6 @@ function Temp1() {
 
   return (
     <div>
-
       <Nav />
       <Sidebar />
       <GoogleMapComponent />
