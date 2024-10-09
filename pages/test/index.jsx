@@ -1,15 +1,18 @@
 import React from 'react';
-//import Slidevideo from '../components/Slidevideo';
-import PopupLogin from '../components/PopupLogin';
-import { ShoppingCart } from '@mui/icons-material';
-import Testcomponent from '../components/Testcomponent';
+import Nav from '../components/Nav';
+import Sidebar from '../components/Sidebar';
+import GoogleMapComponent from '../components/GoogleMapComponent';
+import Footer from '../components/Footer';
+import VideoPlayer from '../components/VideoPlayer';
+import YouTubeVideoList from '../components/YouTubeVideoList';
 function test() {
   return (
     <>
-      <Testcomponent />
-      {/* <PopupLogin /> */}
-      {/* <ShoppingCart /> */}
-      {/* <Slidevideo /> */}
+      <Nav />
+      <Sidebar />
+      <GoogleMapComponent />
+      <VideoPlayer videoIds={YouTubeVideoList} />
+      <Footer />
     </>
   )
 }

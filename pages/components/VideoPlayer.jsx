@@ -60,15 +60,7 @@ const VideoPlayer = ({ videoIds }) => {
                     ></iframe>
                 ))}
             </div>
-            <div className="button-container">
-                <button className='nav-btn prev-btn' id="prev-btn" onClick={handlePrevVideo}>
-                    <ArrowBackIcon />
-                </button>
-                <button className='nav-btn next-btn' id="next-btn" onClick={handleNextVideo}>
-                    <ArrowForwardIcon />
-                </button>
-
-            </div>
+            
         </div>
     );
 };

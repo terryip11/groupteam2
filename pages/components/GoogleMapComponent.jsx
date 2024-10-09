@@ -4,6 +4,8 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Image from 'next/image';
 import Monkeys from '../../public/images/12 Monkeys.jpg';
 import ClubDescription from './ClubDescription';
+import VideoPlayer from './VideoPlayer';
+import YouTubeVideoList from './YouTubeVideoList';
 
 const containerStyle = {
   width: '50%',
@@ -30,7 +32,7 @@ const initialCenter = centers[1];
 const GoogleMapComponent = () => {
   return (
     <>
-      <div className="text-5xl text-center bg-gray-400 text-white">Monkeys</div>
+      <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">Monkeys</div>
       <div className="flex justify-center">
         <Image
           src={Monkeys.src}
@@ -47,13 +49,12 @@ const GoogleMapComponent = () => {
           }}
         />
       </div>
-        
-        
         <div className='flex justify-end bg-gray-500 p-5'>
+
           <div className='text-white text-3xl textstyle mr-10 w-1/2 textstyle hover:text-green-400'>
             <ClubDescription clubId="1" />
           </div>
-        
+
           <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
               <GoogleMap
                 mapContainerStyle={containerStyle}
