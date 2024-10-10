@@ -40,17 +40,17 @@ function Nav() {
             <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">Venue
               <div className="hidden absolute bg-gray-500 z-50 group-hover:block top-9 w-96 rounded-lg shadow-md shadow-gray-500 text-white textstyle" >
                 <Link href="https://www.thewanch.hk" target="_blank" className="block mt-2 hover:bg-green-500">The Wanch</Link>
-                <Link href="https://www.facebook.com/revnowlive" className="block mt-2 hover:bg-green-500">Rev-Now</Link>
-                <Link href="https://www.facebook.com/therockpub/" className="block mt-2 hover:bg-green-500">The Rock Pub</Link>
-                <Link href="https://www.facebook.com/Rockfactorypattaya/" className="block mt-2 hover:bg-green-500">Rock Factory</Link>
-                <Link href="https://rockbarbauhaus.com" className="block mt-2 hover:bg-green-500">Bauhaus Roppongi</Link>
-                <Link href="https://bar-rockaholic.jp/shibuya/" className="block mt-2 hover:bg-green-500">Rockaholic Shibuya Music Bar</Link>
-                <Link href="https://www.facebook.com/12MonkeysPH/" className="block mt-2 hover:bg-green-500">Monkeys Music Hall & Pub</Link>
-                <Link href="https://clubff.modoo.at" className="block mt-2 hover:bg-green-500">Club FF</Link>
-                <Link href="https://hrcwelive.com/en/homepage-en/" className="block mt-2 hover:bg-green-500">Hanoi Rock City</Link>
-                <Link href="https://www.theflyingvmetalbar.com" className="block mt-2 hover:bg-green-500">The Flying V Metal Bar</Link>
-                <Link href="https://www.facebook.com/TDHmalaysia/" className="block mt-2 hover:bg-green-500">Tom, Dick & Harry's</Link>
-                <Link href="https://www.facebook.com/gimmeshelterbali/about" className="block mt-2 hover:bg-green-500">Gimme Shelter Bali</Link>
+                <Link href="https://www.facebook.com/revnowlive" target="_blank" className="block mt-2 hover:bg-green-500">Rev-Now</Link>
+                <Link href="https://www.facebook.com/therockpub/" target="_blank" className="block mt-2 hover:bg-green-500">The Rock Pub</Link>
+                <Link href="https://www.facebook.com/Rockfactorypattaya/" target="_blank" className="block mt-2 hover:bg-green-500">Rock Factory</Link>
+                <Link href="https://rockbarbauhaus.com" target="_blank" className="block mt-2 hover:bg-green-500">Bauhaus Roppongi</Link>
+                <Link href="https://bar-rockaholic.jp/shibuya/" target="_blank" className="block mt-2 hover:bg-green-500">Rockaholic Shibuya Music Bar</Link>
+                <Link href="https://www.facebook.com/12MonkeysPH/" target="_blank" className="block mt-2 hover:bg-green-500">Monkeys Music Hall & Pub</Link>
+                <Link href="https://clubff.modoo.at" target="_blank" className="block mt-2 hover:bg-green-500">Club FF</Link>
+                <Link href="https://hrcwelive.com/en/homepage-en/" target="_blank" className="block mt-2 hover:bg-green-500">Hanoi Rock City</Link>
+                <Link href="https://www.theflyingvmetalbar.com" target="_blank" className="block mt-2 hover:bg-green-500">The Flying V Metal Bar</Link>
+                <Link href="https://www.facebook.com/TDHmalaysia/" target="_blank" className="block mt-2 hover:bg-green-500">Tom, Dick & Harry's</Link>
+                <Link href="https://www.facebook.com/gimmeshelterbali/about" target="_blank" className="block mt-2 hover:bg-green-500">Gimme Shelter Bali</Link>
               </div>
             </li>
 
