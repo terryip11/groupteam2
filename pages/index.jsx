@@ -6,9 +6,23 @@ import Footer from "./components/Footer";
 import VideoPlayer from "./components/VideoPlayer";
 import YouTubeVideoList from "./components/YouTubeVideoList";
 
-function Home() {
+import { useContext,createContext } from "react";
+
+
+const TotalContext = createContext();
+
+
+function TotalProvider({ children }) {
+  const [total, settotal] = useState('');
+
+
+
   return (
     <>
+      <TotalProvider.Provider value={{ id }}>
+      {children}
+    </TotalProvider.Provider>
+
       <div className="">
         <Nav className="" />
         <Sidebar className="" />
@@ -21,4 +35,4 @@ function Home() {
     </>
   )
 }
-export default Home;
+export default TotalContext;
