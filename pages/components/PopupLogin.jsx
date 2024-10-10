@@ -75,7 +75,7 @@ export default function PopupLogin({handleToggle}) {
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </Head>
 
-    <div className='flex justify-center' draggable="true" onDragStart={handleDragStart} onDrag={handleDrag} onDragEnd={handleDragEnd}>
+    <div className='flex justify-center'>
       <div className={`wrapper ${handleToggle? 'active-popup' : 'wrapper'} mx-auto mt-3`}>
         <span className="icon-close"><ion-icon name="close-outline"></ion-icon></span>
         
