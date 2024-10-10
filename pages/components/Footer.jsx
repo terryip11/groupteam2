@@ -10,10 +10,10 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
     return (
-      <footer className="bg-gray-800 absolute bottom-[-1] w-full">
-        <div className="mx-auto flex justify-between items-center">
-          <div className='flex'>
-            <Image src={logo.src} alt="logo" width={120} height={120} className='rounded-full mr-10' />
+      <footer className="bg-gray-800 absolute bottom-[-1] w-full ">
+        <div className="mx-auto flex justify-between items-center max-sm:flex-col">
+          <div className='flex max-sm:flex-col'>
+            <Image src={logo.src} alt="logo" width={120} height={120} className='rounded-full mr-10 max-sm:mx-auto max-sm:mt-2 mb-3' />
             <div className='text-xl text-white hover:text-green-400'>
               <p>Address: 81 Austin Road, Tsim Sha Tsui</p>
               <p>E-mail: aeltd@gmail.com</p>
@@ -24,7 +24,7 @@ const Footer = () => {
 
 
           <div className="textstyle text-bold text-white">
-            <ul className="md:flex md:space-x-5 text-2xl mb-5">
+            <ul className="md:flex md:space-x-5 text-2xl mb-5 max-sm:flex max-sm:gap-3 max-sm:mt-3">
               <li><Link href="#" className="hover:text-green-400">About Us</Link></li>
               <li><Link href="#" className="hover:text-green-400">Contact Us</Link></li>
               <li><Link href="/term" className="hover:text-green-400">Terms</Link></li>
@@ -56,8 +56,7 @@ const Footer = () => {
         </div>
         
         <div className='text-center text-xl w-full' >
-          
-            <p className='hover:text-green-400 hover:text-5xl duration-500'>© Copyright 1999-2024 by Refsnes Data. All Rights Reserved.</p>
+            <p className='text-white hover:text-green-400 hover:text-5xl duration-500'>© Copyright 1999-2024. All Rights Reserved.</p>
         </div>
 
       </footer>
