@@ -3,7 +3,7 @@ import React from 'react';
 import Nav from '../components/Nav';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import GoogleMapComponent from "../components/GoogleMapComponent";
+import ClubImage_Video from "../components/ClubImage_Video";
 
 function Temp1() {
   
@@ -12,7 +12,7 @@ function Temp1() {
     <div>
       <Nav />
       <Sidebar />
-      <GoogleMapComponent />
+      <ClubImage_Video />
       <Footer />
     </div>
   );

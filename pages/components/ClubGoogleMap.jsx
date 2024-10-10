@@ -25,7 +25,7 @@ const containerStyle = {
     height: '600px'
 };
 
-const TestGoogle = () => {
+const ClubGoogleMap = () => {
     return (
         <>
         <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
@@ -45,4 +45,4 @@ const TestGoogle = () => {
     );
 };
 
-export default TestGoogle;
+export default ClubGoogleMap;

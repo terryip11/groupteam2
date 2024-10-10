@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Monkeys from '../../public/images/12 Monkeys.jpg';
 import ClubDescription from './ClubDescription';
 
-const GoogleMapComponent = () => {
+const ClubImage_Video = () => {
   return (
     <>
       <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">Monkeys</div>
@@ -40,4 +40,4 @@ const GoogleMapComponent = () => {
   );
 };
 
-export default GoogleMapComponent;
+export default ClubImage_Video;

@@ -1,18 +1,20 @@
 import React from 'react';
 import Nav from '../components/Nav';
 import Sidebar from '../components/Sidebar';
-import GoogleMapComponent from '../components/GoogleMapComponent';
+import ClubImage_Video from '../components/ClubImage_Video';
 import Footer from '../components/Footer';
 import VideoPlayer from '../components/VideoPlayer';
 import YouTubeVideoList from '../components/YouTubeVideoList';
-import TestGoogle from '../components/TestGoogle';
+import ClubDescription from '../components/ClubDescription';
+import ClubGoogleMap from '../components/ClubGoogleMap';
+
 function test() {
   return (
     <>
       <Nav />
       <Sidebar />
-      <GoogleMapComponent />
-      <TestGoogle/>
+      <ClubImage_Video />
+      <ClubGoogleMap/>
       <Footer />
     </>
   )
