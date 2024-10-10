@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import Monkeys from '../../../public/images/12 Monkeys.jpg';
+import Monkeys from '../../../public/images/Monkeys.jpg';
 import ClubDescription from '../../components/ClubDescription';
 
 const ClubImage_Video = () => {
