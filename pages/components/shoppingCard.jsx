@@ -9,6 +9,17 @@ export default function shoppingCard() {
         <div>
             <Image src="" alt="" />
         </div>
+        <div>
+            <div>
+                <h3>product1</h3>
+                <p>indroduce</p>
+            </div>
+            <div>
+                <p>Subtotal: $0.00</p>
+                <button>Add to cart</button>
+            </div>
+            
+        </div>
       </div>
     </>
   )
