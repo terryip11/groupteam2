@@ -2,11 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import "../../app/globals.css";
 
-export default function ShoppingCard() {
+
+
+
+export default function index() {
   return (
     <>
-      <div className='w-96 h-96 p-3'>
-        <h1 className='flex bg-red-500 text-white'>Shopping Cart</h1>
+      <div className='w-96 h-48 p-3 bg-gray-400'>
+        <h1 className='flex text-white justify-center text-5xl'>Product Name</h1>
         <p className='bg-green-500'>Items in your cart: 0</p>
         <div>
             <Image src="/images/view.jpg" alt="view" width={1000} height={1000} />
@@ -26,4 +29,3 @@ export default function ShoppingCard() {
     </>
   )
 }
-
