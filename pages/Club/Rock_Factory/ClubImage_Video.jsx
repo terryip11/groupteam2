@@ -1,7 +1,11 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
+<<<<<<< HEAD
 import RockFactory from '../../../public/images/RockFactory.jpg';
+=======
+// import Monkeys from '../../../public/images/Rock Factory.jpg';
+>>>>>>> 6c40e682cb4fecb21f43d9980f1b4edf5c7fd69f
 import ClubDescription from '../../components/ClubDescription';
 
 const ClubImage_Video = () => {
@@ -10,7 +14,11 @@ const ClubImage_Video = () => {
       <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">Rock Factory</div>
         <div className="flex justify-center">
           <Image
+<<<<<<< HEAD
             src={RockFactory.src}
+=======
+            src={'./images/Rock Factory.jpg'}
+>>>>>>> 6c40e682cb4fecb21f43d9980f1b4edf5c7fd69f
             alt="Mountains"
             width={1000}
             height={1000}
