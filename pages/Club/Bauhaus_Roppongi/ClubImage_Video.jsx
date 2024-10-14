@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import Monkeys from '../../../public/images/Bauhaus Roppongi.jpg';
+import Monkeys from '../../../public/images/BauhausRoppongi.jpg';
 import ClubDescription from '../../components/ClubDescription';
 
 const ClubImage_Video = () => {
@@ -10,7 +10,7 @@ const ClubImage_Video = () => {
       <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">Bauhaus Roppongi</div>
         <div className="flex justify-center">
           <Image
-            src={Monkeys.src}
+            src={'./images/Bauhaus Roppongi.png'}
             alt="Mountains"
             width={1000}
             height={1000}

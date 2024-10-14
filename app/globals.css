@@ -34,9 +34,7 @@ body {
   margin: 0;
   box-sizing: border-size;
 }
-:hover {
-  cursor: pointer;
-}
+
 /* Wrapper PART START */
 .wrapper {
   position: absolute;

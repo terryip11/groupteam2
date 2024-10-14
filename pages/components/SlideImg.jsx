@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/images/Rock Factory.jpg', 
+  '/images/RockFactory.jpg', 
   '/images/TheWanch.jpg', 
   '/images/HRC.jpg',
-  '/images/12 Monkeys.jpg',
-  '/images/Bauhaus Roppongi.png',
-  '/images/Club-ff.jpg',
-  '/images/Flying V Metal.png',
-  '/images/Gimme Shelter.jpg'
+  '/images/Monkeys.jpg',
+  '/images/BauhausRoppongi.png',
+  '/images/ClubFF.jpg',
+  '/images/FlyingVMetal.png',
+  '/images/GimmeShelter.jpg'
 ];
 const picshow = () => {
 
