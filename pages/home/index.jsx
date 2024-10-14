@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Login from './components/login';
+import Booking from './components/Booking';
 
-export default function home() {
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+  };
+
   return (
-    <div>
-      <h1>hello</h1>
+    <div className="App">
+      {!isLoggedIn ? (
+        <Login onLoginSuccess={handleLoginSuccess} />
+      ) : (
+        <Booking />
+      )}
     </div>
-  )
+  );
 }
+
+export default App;
