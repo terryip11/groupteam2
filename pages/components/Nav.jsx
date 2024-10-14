@@ -67,7 +67,7 @@ function Nav() {
             </li>
 
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">Terms</Link>
+              <Link href="/Shopping">Shopping</Link>
             </li>
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
               <Link href="/">Contact Us</Link>

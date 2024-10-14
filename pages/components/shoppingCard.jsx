@@ -3,9 +3,9 @@ import Image from 'next/image';
 import "../../app/globals.css";  
 
 const pricedata = [   
-  {id:1, price:2400, productname:'The Wanch'},   
-  {id:2, price:3000, productname:'ClubFF'},   
-  {id:3, price:1500, productname:'FlyingVmetal'}, 
+  {id:1, dayprice:2400, nightprice:3000, productname:'The Wanch'},   
+  {id:2, dayprice:1400, nightprice:2000, productname:'ClubFF'},   
+  {id:3, dayprice:1300, nightprice:1000, productname:'FlyingVmetal'}, 
 ];  
 
 export default function ShoppingCard() {   
@@ -35,7 +35,8 @@ export default function ShoppingCard() {
     return selectedItems.reduce((total, item) => {
       const selectedItem = pricedata.find(p => p.id === parseInt(item));
       const quantity = quantities[item] || 1;
-      return total + (selectedItem ? selectedItem.price * quantity : 0);
+      const price = item === '1' ? (selectedItem.dayprice || selectedItem.nightprice) : selectedItem.price;
+      return total + (selectedItem ? price * quantity : 0);
     }, 0);
   };
 
@@ -57,7 +58,7 @@ export default function ShoppingCard() {
             </div>             
             <div>               
               <label htmlFor="nighttime" className='hover:text-green-400 cursor-pointer'>NightTime:$ HKD3000</label>               
-              <input type="checkbox" name='2' id='nighttime' className='ml-2 size-4' onChange={handleCheckboxChange} />             
+              <input type="checkbox" name='1' id='nighttime' className='ml-2 size-4' onChange={handleCheckboxChange} />             
             </div>           
           </div>           
           <div className='flex justify-center'>             
@@ -72,9 +73,10 @@ export default function ShoppingCard() {
             {selectedItems.length > 0 ? '選購的門票是:' : '未選購門票'}             
             {selectedItems.map((item, index) => {               
               const selectedItem = pricedata.find(p => p.id === parseInt(item));               
+              const price = item === '1' ? (selectedItem.dayprice || selectedItem.nightprice) : selectedItem.price;
               return (                 
                 <div className='hover:text-red-400' key={index}>                   
-                  Price: {selectedItem ? selectedItem.price : 'N/A'} {selectedItem.productname}                   
+                  Price: {price} {selectedItem.productname}                   
                   <input                     
                     type="number"                     
                     min={0}                     
