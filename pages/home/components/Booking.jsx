@@ -28,16 +28,19 @@ function Booking() {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className='relative'>
       <div style={styles.datePickerSection}>
-        <h3 className='bg-gray-500'>Choose your date and time for club booking</h3>
-        <DatePicker
-          selected={selectedDate}
-          onChange={date => setSelectedDate(date)}
-          dateFormat="MMMM d, yyyy"
-          minDate={new Date()}
-          placeholderText="Click to select a date"
-        />
+        <h1 className='bg-gray-500 text-white font-bold text-3xl'>Choose your date and time for club booking</h1>
+        <div className='flex justify-center'>      
+          <DatePicker
+            className='bg-cyan-200 font-bold text-5xl flex justify-center mt-3 text-center'
+            selected={selectedDate}
+            onChange={date => setSelectedDate(date)}
+            dateFormat="MMMM d, yyyy"
+            minDate={new Date()}
+            placeholderText="Click to select a date"
+          />
+        </div>
         <div style={styles.timeSlotSection}>
           <button 
             style={selectedTimeSlot === 'Day Time' ? styles.selectedSlot : styles.timeSlot}

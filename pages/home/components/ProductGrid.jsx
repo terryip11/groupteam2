@@ -43,7 +43,7 @@ function ProductGrid({ addToCart, removeFromCart }) {
   };
 
   return (
-    <div style={styles.grid}>
+    <div style={styles.grid} className=''>
       {products.map((product, index) => (
         <div key={index} style={{
           ...styles.card,
@@ -52,8 +52,8 @@ function ProductGrid({ addToCart, removeFromCart }) {
           <h3 style={styles.productName}>{product.name}</h3>
           <div style={styles.rateContainer}>
             <div style={styles.rate}>
-              <p style={styles.rateLabel}>Daytime Rate:</p>
-              <p style={styles.rateValue}>HKD{product.daytime}</p>
+              <p>Daytime Rate:</p>
+              <p>HKD{product.daytime}</p>
               <label style={styles.checkboxLabel}>
                 <input
                   type="checkbox"
