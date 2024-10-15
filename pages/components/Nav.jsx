@@ -46,7 +46,7 @@ function Nav() {
 
           <ul className="hidden font-bold text-white md:flex md:items-center md:gap-x-10">
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">Home</Link>
+              <Link href="/home">Home</Link>
             </li>
 
             <li className="group flex flex-col relative mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">Venue
@@ -67,10 +67,10 @@ function Nav() {
             </li>
 
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">Terms</Link>
+              <Link href="/Shopping">Shop</Link>
             </li>
-            <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">Contact Us</Link>
+            <li className="mr-3 mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
+              <Link href="/">Contact</Link>
             </li>
           </ul>
           <div className="flex mx-auto md:mr-20">

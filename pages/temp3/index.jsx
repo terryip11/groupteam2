@@ -11,7 +11,7 @@ function Temp3() {
         <>
         <Nav />
         <Sidebar />
-        <Photos />
+        {/* <Photos /> */}
         <ClubDes />
         <Footer />
         </>
