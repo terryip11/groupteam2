@@ -15,7 +15,7 @@ export default function ShoppingCard() {
 
   const handleclickRight = () => {     
     setclickpopRight(!clickpopRight);   
-  };    
+  };
 
   const handleCheckboxChange = (event) => {     
     const { name, checked } = event.target;     
@@ -24,7 +24,7 @@ export default function ShoppingCard() {
     } else {       
       setSelectedItems(selectedItems.filter(item => item !== name));     
     }   
-  };    
+  };
 
   const handleQuantityChange = (event, itemId) => {
     const newQuantities = { ...quantities, [itemId]: parseInt(event.target.value) };

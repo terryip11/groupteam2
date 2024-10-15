@@ -10,7 +10,7 @@ function Booking() {
   const [selectedTimeSlot, setSelectedTimeSlot] = useState('');
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    setCart([...cart, { ...product, selectedDate }]);
   };
 
   const removeFromCart = (id) => {
@@ -30,7 +30,7 @@ function Booking() {
   return (
     <div style={styles.container}>
       <div style={styles.datePickerSection}>
-        <h3>Choose your date and time for club booking</h3>
+        <h3 className='bg-gray-500'>Choose your date and time for club booking</h3>
         <DatePicker
           selected={selectedDate}
           onChange={date => setSelectedDate(date)}
@@ -75,7 +75,7 @@ function Booking() {
           <ul style={styles.cartList}>
             {cart.map(item => (
               <li key={item.id} style={styles.cartItem}>
-                {item.name} - ${item.price}
+                {item.name} - ${item.price} - {item.selectedDate ? item.selectedDate.toDateString() : 'No Date Selected'}
                 <button onClick={() => removeFromCart(item.id)} style={styles.removeButton}>
                   Remove
                 </button>
