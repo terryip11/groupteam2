@@ -12,7 +12,7 @@ function home() {
         <Nav />
         <Sidebar />
       </div>
-      <div className="video container">
+      <div className="video">
         <iframe
         src={"https://www.youtube.com/embed/AjVCx4nN2dg?autoplay=1&mute=1"}
         width="100%"
