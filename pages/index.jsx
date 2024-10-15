@@ -3,8 +3,6 @@ import React from 'react';
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import VideoPlayer from "./components/VideoPlayer";
-import YouTubeVideoList from "./components/YouTubeVideoList";
 
 function home() {
   
@@ -13,7 +11,17 @@ function home() {
       <div>
         <Nav />
         <Sidebar />
-        <VideoPlayer videoIds={YouTubeVideoList} />
+      </div>
+      <div classname="video container">
+        <iframe
+        src={"https://www.youtube.com/embed/AjVCx4nN2dg"}
+        width="100%"
+        height="450"
+        allowFullScreen
+        
+        ></iframe>
+      </div>
+      <div>
         <Footer />
       </div>
     </>
