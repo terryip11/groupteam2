@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import "../../app/globals.css";
 const ClubDescription = ({ clubId, description }) => {
-    const [description, setDescription] = useState('');
+    const [clubDescription, setClubDescription] = useState(description);
 
     useEffect(() => {
         const fetchDescription = async () => {
@@ -18,7 +18,7 @@ const ClubDescription = ({ clubId, description }) => {
                 const club = data.find(club => club.id === String(clubId));
                 if (club) {
                     console.log(`Found club: ${club.name}, Description: ${club.description}`);
-                    setDescription(club.description);
+                    setClubDescription(club.description);
                 } else {
                     console.log(`Club with ID ${clubId} not found.`);
                 }
@@ -32,7 +32,7 @@ const ClubDescription = ({ clubId, description }) => {
     return (
         <div style={{ margin: '20px' }}>
             <Typography variant="h1" sx={{ textAlign: 'center', margin: '20px', fontSize: '40px' }}></Typography>
-            <p>{description || 'Description not available.'}</p>
+            <p>{clubDescription || 'Description not available.'}</p>
             <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl'>Book Now...</button>
         </div>
     );
