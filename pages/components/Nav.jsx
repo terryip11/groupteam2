@@ -73,7 +73,7 @@ function Nav() {
             </li>
           </ul>
           <div className="flex mx-auto md:mr-20">
-          <button onClick={handleToggle} className="login-popup text-white text-bold hover:text-blue-500 text-bold text-4xl textstyle mx-auto">REGISTER</button>
+          <button onClick={handleToggle} className="login-popup text-white text-bold hover:text-blue-500 text-bold text-3xl textstyle mx-auto">REGISTER</button>
           </div>
           
         </nav>
