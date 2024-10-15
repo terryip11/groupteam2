@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import ProductGrid from './ProductGrid';
-import { responsiveFontSizes } from '@mui/material';
 
 function Booking() {
   const [cart, setCart] = useState([]);
@@ -13,8 +12,11 @@ function Booking() {
     setCart([...cart, { ...product, selectedDate }]);
   };
 
-  const removeFromCart = (id) => {
+  /* const removeFromCart = (id) => {
     setCart(cart.filter(item => item.id !== id));
+  }; */
+  const removeFromCart = (productName) => {
+    setCart(prevCart => prevCart.filter(item => item.name !== productName));
   };
 
   const calculateTotal = () => {
@@ -26,6 +28,9 @@ function Booking() {
     alert("Proceeding to payment page...");
     // You can replace this with actual navigation logic, e.g., using React Router
   };
+  
+
+
 
   return (
     <div style={styles.container} className='relative'>
@@ -33,7 +38,7 @@ function Booking() {
         <h1 className='bg-gray-500 text-white font-bold text-3xl'>Choose your date and time for club booking</h1>
         <div className='flex justify-center'>      
           <DatePicker
-            className='bg-cyan-200 font-bold text-5xl flex justify-center mt-3 text-center'
+            className='bg-gray-500 font-bold text-5xl flex justify-center mt-3 text-center placeholder:text-white rounded-md'
             selected={selectedDate}
             onChange={date => setSelectedDate(date)}
             dateFormat="MMMM d, yyyy"
@@ -67,7 +72,7 @@ function Booking() {
         </ul>
       </div>
 
-      <ProductGrid addToCart={addToCart} />
+      <ProductGrid addToCart={addToCart} removeFromCart={removeFromCart} />
       
       <div style={styles.cartSection}>
         <h3>Shopping Cart</h3>
@@ -75,22 +80,20 @@ function Booking() {
           <p>Your cart is empty</p>
         ) : (
           <>
-          <ul style={styles.cartList}>
+          <div style={styles.cartList} className='bg-gray-500 text-white font-bold text-xl flex flex-col justify-center mt-3 text-center'>
             {cart.map(item => (
-              <li key={item.id} style={styles.cartItem}>
+              <div key={item.id} style={styles.cartItem}>
                 {item.name} - ${item.price} - {item.selectedDate ? item.selectedDate.toDateString() : 'No Date Selected'}
-                <button onClick={() => removeFromCart(item.id)} style={styles.removeButton}>
-                  Remove
-                </button>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
          <div style={styles.totalSection}>
-         <h4>Total: ${calculateTotal()}</h4>
+         <h4 className='mt-1 text-5xl bg-gray-500 text-white font-bold '>Total: ${calculateTotal()}</h4>
        </div>
-       <button onClick={handleCheckout} style={styles.checkoutButton}>
-         Proceed to Checkout
-       </button>
+       <div className='flex justify-center'>
+       <button onClick={handleCheckout} style={styles.checkoutButton} className='bg-gray-500 font-bold text-5xl mt-3 text-center text-green-500 rounded-md'>Proceed to Checkout</button>
+       </div>
+       
      </>
    )}
  </div>
@@ -99,7 +102,7 @@ function Booking() {
 }
 const styles = {
   container: {
-    maxWidth: '800px',
+    maxWidth: '100rem',
     margin: '0 auto',
     padding: '20px',
   },
@@ -150,6 +153,7 @@ const styles = {
     borderBottom: '1px solid #ccc',
   },
   removeButton: {
+    display: 'block',
     padding: '5px',
     background: '#dc3545',
     color: 'white',

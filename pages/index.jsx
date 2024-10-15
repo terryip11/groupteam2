@@ -12,13 +12,14 @@ function home() {
         <Nav />
         <Sidebar />
       </div>
-      <div classname="video container">
+      <div className="video container">
         <iframe
-        src={"https://www.youtube.com/embed/AjVCx4nN2dg"}
+        src={"https://www.youtube.com/embed/AjVCx4nN2dg?autoplay=1&mute=1"}
         width="100%"
         height="450"
         allowFullScreen
         
+
         ></iframe>
       </div>
       <div>
@@ -27,4 +28,4 @@ function home() {
     </>
   )
 }
-export default home;
+export default home;
