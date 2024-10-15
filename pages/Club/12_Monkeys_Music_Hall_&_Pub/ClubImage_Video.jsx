@@ -10,7 +10,7 @@ const ClubImage_Video = () => {
       <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">12 Monkeys Music Hall & Pub</div>
         <div className="flex justify-center">
           <Image
-            src={'./images/12 Monkeys.jpg'}
+            src={Monkeys.src}
             alt="Mountains"
             width={1000}
             height={1000}
