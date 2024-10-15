@@ -61,7 +61,7 @@ const Login = ({onLoginSuccess}) => {
 const styles = {
   container: {
     maxWidth: '20rem',
-    margin: '15rem auto',
+    margin: '5rem auto',
     padding: '30px',
     boxShadow: '0 0 10px rgba(0,0,0,0.1)',
     borderRadius: '5px',

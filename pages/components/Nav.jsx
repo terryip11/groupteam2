@@ -36,7 +36,7 @@ function Nav() {
         <nav className="flex justify-center text-3xl p-3 px-10 bg-gray-700 md:flex md:font-bold" >
           <div className="flex flex-col gap-x-6 flex-0 ">
           <Image className=" size-40 rounded-full mx-auto mt-5" width={1000} height={1000} src={logo.src} alt="logo" />
-            <span className="text-4xl md:text-6xl text-white flex textstyle hover:rotate-180 duration-500 hover:scale-100 hover:text-green-500">Rock Entertament LTD</span>
+            <span className="text-4xl md:text-6xl text-white flex textstyle hover:rotate-180 duration-500 hover:scale-100 hover:text-green-500">Booking System</span>
             
           </div>
         </nav>
@@ -66,10 +66,10 @@ function Nav() {
             </li>
 
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/Shopping">Shop</Link>
+              <Link href="/Booking">Booking</Link>
             </li>
             <li className="mr-3 mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="https://api.whatsapp.com/send?phone=64754756">Whatsapp</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
           <div className="flex mx-auto md:mr-20">
