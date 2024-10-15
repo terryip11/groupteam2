@@ -16,7 +16,6 @@ import "../Club/The_Flying_V_Metal_Bar"
 import "../Club/Tom_Dick_&_Harry"
 import "../Club/Gimme_Shelter_Bali"
 
-
 function Nav() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -70,7 +69,7 @@ function Nav() {
               <Link href="/Shopping">Shop</Link>
             </li>
             <li className="mr-3 mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">Contact</Link>
+              <Link href="https://api.whatsapp.com/send?phone=64754756">Whatsapp</Link>
             </li>
           </ul>
           <div className="flex mx-auto md:mr-20">

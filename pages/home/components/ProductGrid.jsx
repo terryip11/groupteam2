@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import Image from 'next/image';
+
 
 const products = [
-  { name: "The Wanch", daytime: 2400, nighttime: 3000 },
-  { name: "Rev-Now", daytime: 1500, nighttime: 2400 },
-  { name: "The Rock Pub", daytime: 1200, nighttime: 1800 },
-  { name: "Rock Factory", daytime: 1050, nighttime: 1500 },
-  { name: "Bauhaus Roppongi", daytime: 2400, nighttime: 3000 },
-  { name: "Rockaholic Shibuya Music Bar", daytime: 2100, nighttime: 2700 },
-  { name: "12 Monkeys Music Hall & Pub", daytime: 900, nighttime: 1350 },
-  { name: "Club FF", daytime: 1800, nighttime: 2250 },
-  { name: "Hanoi Rock City", daytime: 900, nighttime: 1350 },
-  { name: "The Flying V Metal Bar", daytime: 1500, nighttime: 2400 },
-  { name: "Tom, Dick & Harry's", daytime: 1200, nighttime: 1800 },
-  { name: "Gimme Shelter Bali", daytime: 1800, nighttime: 2250 },
+  { name: "The Wanch", daytime: 2400, nighttime: 3000, image:'TheWanch.jpg' },
+  { name: "Rev-Now", daytime: 1500, nighttime: 2400, image:'Rev-Now.jpg'},
+  { name: "The Rock Pub", daytime: 1200, nighttime: 1800, image:'TheRockPub.jpg' },
+  { name: "Rock Factory", daytime: 1050, nighttime: 1500, image:'RockFactory.jpg'},
+  { name: "Bauhaus Roppongi", daytime: 2400, nighttime: 3000, image:'BauhausRoppongi.jpg'},
+  { name: "Rockaholic Shibuya Music ", daytime: 2100, nighttime: 2700, image:'Rockaholic.jpg'},
+  { name: "12 Monkeys Music ", daytime: 900, nighttime: 1350, image:'Monkeys.jpg'},
+  { name: "Club FF", daytime: 1800, nighttime: 2250 ,image:'ClubFF.jpg'},
+  { name: "Hanoi Rock City", daytime: 900, nighttime: 1350, image:'HRC.jpg'},
+  { name: "The Flying V Metal Bar", daytime: 1500, nighttime: 2400, image :'FlyingVMetal.jpg'},
+  { name: "Tom, Dick & Harry's", daytime: 1200, nighttime: 1800, image:'Tom.jpg'},
+  { name: "Gimme Shelter Bali", daytime: 1800, nighttime: 2250, image:'GimmeShelter.jpg'},
 ];
 
 function ProductGrid({ addToCart, removeFromCart }) {
@@ -43,13 +44,18 @@ function ProductGrid({ addToCart, removeFromCart }) {
   };
 
   return (
-    <div style={styles.grid} className=''>
+    <div style={styles.grid}>
       {products.map((product, index) => (
         <div key={index} style={{
           ...styles.card,
           ...(selectedProducts[product.name] && styles.selectedCard)
         }}>
           <h3 style={styles.productName}>{product.name}</h3>
+          <div className='flex justify-center overflow-hidden'>
+          <Image className='size-48 mb-3 rounded-md hover:size-56 duration-500 ' width={160} height={160} src={`/images/${product.image}`} alt={product.name} style={styles.productImage} />
+          </div>
+          
+          
           <div style={styles.rateContainer}>
             <div style={styles.rate}>
               <p>Daytime Rate:</p>

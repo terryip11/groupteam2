@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
-
+import Link from 'next/link';
 import "../../app/globals.css";
 const ClubDescription = ({ clubId, description }) => {
     const [clubDescription, setClubDescription] = useState(description);
@@ -33,7 +33,7 @@ const ClubDescription = ({ clubId, description }) => {
         <div style={{ margin: '20px' }}>
             <Typography variant="h1" sx={{ textAlign: 'center', margin: '20px', fontSize: '40px' }}></Typography>
             <p>{clubDescription || 'Description not available.'}</p>
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl'>Book Now...</button>
+            <Link href='http://localhost:3000/home' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">Book Now...</Link>
         </div>
     );
 };
