@@ -1,10 +1,11 @@
 import React from 'react'
 import Booking from '../home/components/Booking';
-import ProductGrid from '../home/components/ProductGrid';
+import Login from '../home/components/login';
 
 export default function index() {
   return (
     <>
+        
         <Booking />
         
     </>
