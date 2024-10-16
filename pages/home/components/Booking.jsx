@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import ProductGrid from './ProductGrid';
+import Link from 'next/link';
+
 
 function Booking() {
   const [cart, setCart] = useState([]);
@@ -90,9 +92,9 @@ function Booking() {
          <div style={styles.totalSection}>
          <h4 className='mt-1 text-5xl bg-gray-500 text-white font-bold '>Total: ${calculateTotal()}</h4>
        </div>
-       <div className='flex justify-center'>
+       <Link href='/payment' className='flex justify-center'>
        <button onClick={handleCheckout} style={styles.checkoutButton} className='bg-gray-500 font-bold text-5xl mt-3 text-center text-green-500 rounded-md'>Proceed to Checkout</button>
-       </div>
+       </Link>
        
      </>
    )}

@@ -1,8 +1,8 @@
 // src/App.js
 import React from 'react';
-import PaymentForm from '../components/PaymentForm';
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import PaymentForm from '@/pages/components/PaymentForm';
+import Nav from '@/pages/components/Nav';
+import Footer from '@/pages/components/Footer';
 
 const App = () => {
     return (
@@ -11,7 +11,6 @@ const App = () => {
             <Nav />
         </div>
         <div>
-            <h1>Checkout</h1>
             <PaymentForm />
         </div>
         <div>
