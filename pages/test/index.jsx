@@ -1,11 +1,9 @@
-import React from 'react';
-
-
-function test() {
+import React from 'react'
+import Whatsapp from '../components/Whatsapp'
+export default function index() {
   return (
     <>
-      <h1>test</h1>
+      <Whatsapp />
     </>
   )
 }
-export default test;

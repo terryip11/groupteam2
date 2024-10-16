@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../../../app/globals.css';
 const Login = ({onLoginSuccess}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -28,7 +28,7 @@ const Login = ({onLoginSuccess}) => {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className='relative bg-gray-500'>
       <h2>Club Boooking</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
         <div style={styles.inputGroup}>
@@ -60,9 +60,9 @@ const Login = ({onLoginSuccess}) => {
 
 const styles = {
   container: {
-    maxWidth: '300px',
-    margin: '0 auto',
-    padding: '20px',
+    maxWidth: '20rem',
+    margin: '5rem auto',
+    padding: '30px',
     boxShadow: '0 0 10px rgba(0,0,0,0.1)',
     borderRadius: '5px',
   },
@@ -77,6 +77,7 @@ const styles = {
     width: '100%',
     padding: '8px',
     fontSize: '16px',
+    borderRadius: '5px',
   },
   button: {
     padding: '10px',
@@ -85,6 +86,7 @@ const styles = {
     border: 'none',
     borderRadius: '5px',
     cursor: 'pointer',
+    width:'auto'
   },
   error: {
     color: 'red',

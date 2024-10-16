@@ -16,7 +16,6 @@ import "../Club/The_Flying_V_Metal_Bar"
 import "../Club/Tom_Dick_&_Harry"
 import "../Club/Gimme_Shelter_Bali"
 
-
 function Nav() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -37,7 +36,7 @@ function Nav() {
         <nav className="flex justify-center text-3xl p-3 px-10 bg-gray-700 md:flex md:font-bold" >
           <div className="flex flex-col gap-x-6 flex-0 ">
           <Image className=" size-40 rounded-full mx-auto mt-5" width={1000} height={1000} src={logo.src} alt="logo" />
-            <span className="text-4xl md:text-6xl text-white flex textstyle hover:rotate-180 duration-500 hover:scale-100 hover:text-green-500">Rock Entertament LTD</span>
+            <span className="text-4xl md:text-6xl text-white flex textstyle hover:rotate-180 duration-500 hover:scale-100 hover:text-green-500">Booking System</span>
             
           </div>
         </nav>
@@ -67,14 +66,14 @@ function Nav() {
             </li>
 
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/Shopping">Shop</Link>
+              <Link href="/Booking">Booking</Link>
             </li>
             <li className="mr-3 mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
           <div className="flex mx-auto md:mr-20">
-          <button onClick={handleToggle} className="login-popup text-white text-bold hover:text-blue-500 text-bold text-4xl textstyle mx-auto">REGISTER</button>
+          <button onClick={handleToggle} className="login-popup text-white text-bold hover:text-blue-500 text-bold text-3xl textstyle mx-auto">REGISTER</button>
           </div>
           
         </nav>
