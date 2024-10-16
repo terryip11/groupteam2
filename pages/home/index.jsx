@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Login from './components/login';
 import Booking from './components/Booking';
+import Nav from '../components/Nav';
+import Sidebar from '../components/Sidebar';
+import Footer from '../components/Footer';
+import Whatsapp from '../components/Whatsapp';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -10,13 +14,20 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
+      <Nav />
+      <Sidebar />
+      <div className="App">
       {!isLoggedIn ? (
         <Login onLoginSuccess={handleLoginSuccess} />
       ) : (
         <Booking />
       )}
     </div>
+      <Whatsapp />
+    <Footer />
+    </>
+    
   );
 }
 
