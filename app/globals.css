@@ -239,12 +239,12 @@ body {
   font-size: 20px;
   justify-content: center; 
   align-items: center;    
-  min-height: 20vh;      /* Ensures the container takes at least the full viewport height */
+  min-height: 5vh;      /* Ensures the container takes at least the full viewport height */
   text-align: center;     /* Optional: centers text inside the container */
 }
 
-
+/* 
 .contactForm {
   display: flex;
 
-}
+} */

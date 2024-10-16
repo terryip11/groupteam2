@@ -18,7 +18,7 @@ export default function Contact() {
 
       <Nav />
       <Sidebar />
-      <div style={{ margin: '15px' , fontSize: '30px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>        
+      <div style={{ margin: '30px', fontSize: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <h1>Contact Us</h1>
       </div>
       <div className="contactInfo">
@@ -28,6 +28,10 @@ export default function Contact() {
         <p>Fax: 852 2736 0612</p>
 
       </div>
+
+      <h1 style={{ margin: '30px', fontSize: '30px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        Or leave us a message below
+      </h1>
       <div className="contactForm">
         <ContactForm />
       </div>
