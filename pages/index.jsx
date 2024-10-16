@@ -14,11 +14,12 @@ function home() {
       </div>
       <div classname="video container">
         <iframe
-        src={"https://www.youtube.com/embed/AjVCx4nN2dg"}
+        src={"https://www.youtube.com/embed/AjVCx4nN2dg?autoplay=1&mute=1"}
         width="100%"
         height="450"
         allowFullScreen
         
+
         ></iframe>
       </div>
       <div>
