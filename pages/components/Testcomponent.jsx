@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
 const Page = () => {
-  const [date, setDate] =  useState(new Date());
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    const fetchData = aysnc () => {
-      const res = await fetch ('https://raw.githubusercontent.com/terryip11/api/refs/heads/main/clubapi.json');
-      const result = await res.json();
-      setDate(result);
-    };
+    const fetchData = aysnc() => {
+  const res = await fetch('https://raw.githubusercontent.com/terryip11/api/refs/heads/main/clubapi.json');
+  const result = await res.json();
+  setDate(result);
+};
 
-    fetchData(); []);
+fetchData();
+},[]);
 
-  return (
-    result
-  )
+return (
+  result
+)
 }
 
-export default  Page;
+export default Page;
 
 
 
