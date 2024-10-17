@@ -1,6 +1,7 @@
 import "../../app/globals.css";
 import { useState } from "react";
-import logo from '../../public/images/rock-and-roll-music-Poster.jpg';import Image from "next/image";
+import Rock from '../../public/images/RockAndRoll.jpg';
+import Image from "next/image";
 import Link from "next/link";
 import PopupLogin from "./PopupLogin";
 import "../Club/Wanch"
@@ -35,7 +36,7 @@ function Nav() {
       <div className="relative"> 
         <nav className="flex justify-center text-3xl p-3 px-10 bg-gray-700 md:flex md:font-bold" >
           <div className="flex flex-col gap-x-6 flex-0 ">
-          <Image className=" size-40 rounded-full mx-auto mt-5" width={1000} height={1000} src={logo.src} alt="logo" />
+          <Image className=" size-40 rounded-full mx-auto mt-5" width={1000} height={1000} src={Rock.src} alt="logo" />
             <span className="text-4xl md:text-6xl text-white flex textstyle hover:rotate-180 duration-500 hover:scale-100 hover:text-green-500">Asia Music Bar Performing Booking System</span>
             
           </div>

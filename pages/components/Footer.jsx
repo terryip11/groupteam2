@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../public/images/rock-and-roll-music-Poster.jpg';
+import Rock from '../../public/images/RockAndRoll.jpg';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -13,7 +13,7 @@ const Footer = () => {
       <footer className="bg-gray-800 absolute bottom-[-1] w-full p-3 ">
         <div className="mx-auto flex justify-between items-center max-sm:flex-col">
           <div className='flex max-sm:flex-col'>
-            <Image src={logo.src} alt="logo" width={120} height={120} className='rounded-full mr-10 max-sm:mx-auto max-sm:mt-2 mb-3' />
+            <Image src={Rock.src} alt="logo" width={120} height={120} className='rounded-full mr-10 max-sm:mx-auto max-sm:mt-2 mb-3' />
             <div className='text-xl text-white hover:text-green-400'>
               <p>Address: 81 Austin Road, Tsim Sha Tsui</p>
               <p>E-mail: aeltd@gmail.com</p>
