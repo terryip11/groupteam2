@@ -38,7 +38,7 @@ function Term() {
                             8. Club FF, Korea<br />
                             9. Hanoi Rock City, Vietnam<br />
                             10. The Flying V Metal Bar, Singapore<br />
-                            11. Tom, Dick & Harry's, Malaysia<br />
+                            11. Tom, Dick & Harry&#39;s, Malaysia<br />
                             12. Gimme Shelter Bali, Indonesia
                         </p>
                         <br />
@@ -66,14 +66,14 @@ function Term() {
                         <br />
                         <p>
                             Cancellation Policy:<br />
-                            Cancellations must be made in writing at least 30 days prior to the scheduled performance date for a full refund. Cancellations made less than 30 days in advance may incur a penalty or forfeiture of deposit, depending on the venue's policies.
+                            Cancellations must be made in writing at least 30 days prior to the scheduled performance date for a full refund. Cancellations made less than 30 days in advance may incur a penalty or forfeiture of deposit, depending on the venue&#39;s policies.
                         </p>
                         <br />
                         <p>
                             Performance Guidelines:<br />
                             1. Set Duration: Each performance must adhere to the set duration outlined in the contract.<br />
                             2. Sound Check: Bands are required to complete a sound check at least two hours prior to the performance.<br />
-                            3. Conduct: Bands are expected to conduct themselves professionally and adhere to the venue's policies.
+                            3. Conduct: Bands are expected to conduct themselves professionally and adhere to the venue&#39;s policies.
                         </p>
                         <br />
                         <p>
@@ -102,7 +102,6 @@ function Term() {
                         </p>
                     </div>
                 </div>
-
                 <Footer />
             </div >
 
