@@ -56,7 +56,7 @@ function Nav() {
                 <Link href="../Club/Rock_Factory/" target="_blank" className="block mt-2 hover:bg-green-500">Rock Factory</Link>
                 <Link href="../Club/Bauhaus_Roppongi" target="_blank" className="block mt-2 hover:bg-green-500">Bauhaus Roppongi</Link>
                 <Link href="../Club/Rockaholic_Shibuya_Music_Bar/" target="_blank" className="block mt-2 hover:bg-green-500">Rockaholic Shibuya Music Bar</Link>
-                <Link href="../Club/12_Monkeys_Music_Hall_&_Pub/" target="_blank" className="block mt-2 hover:bg-green-500">Monkeys Music Hall & Pub</Link>
+                <Link href="../Club/12_Monkeys_Music_Hall_&_Pub/" target="_blank" className="block mt-2 hover:bg-green-500">12 Monkeys Music Hall & Pub</Link>
                 <Link href="../Club/Club_FF" target="_blank"className="block mt-2 hover:bg-green-500">Club FF</Link>
                 <Link href="../Club/Hanoi_Rock_City/" target="_blank" className="block mt-2 hover:bg-green-500">Hanoi Rock City</Link>
                 <Link href="../Club/The_Flying_V_Metal_Bar" target="_blank" className="block mt-2 hover:bg-green-500">The Flying V Metal Bar</Link>
@@ -66,7 +66,7 @@ function Nav() {
             </li>
 
             <li className="mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
-              <Link href="/booking">Booking</Link>
+              <Link href="/Booking">Booking</Link>
             </li>
             <li className="mr-3 mt-8 md:mt-0 text-center hover:text-blue-500 rounded-lg">
               <Link href="/contact">Contact</Link>

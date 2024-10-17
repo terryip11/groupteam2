@@ -10,7 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
     return (
-      <footer className="bg-gray-800 absolute bottom-[-1] w-full ">
+      <footer className="bg-gray-800 absolute bottom-[-1] w-full p-3 ">
         <div className="mx-auto flex justify-between items-center max-sm:flex-col">
           <div className='flex max-sm:flex-col'>
             <Image src={logo.src} alt="logo" width={120} height={120} className='rounded-full mr-10 max-sm:mx-auto max-sm:mt-2 mb-3' />
@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="textstyle text-bold text-white">
             <ul className="md:flex md:space-x-5 text-2xl mb-5 max-sm:flex max-sm:gap-3 max-sm:mt-3">
               
-              <li><Link href="/term" className="hover:text-green-400">Terms</Link></li>
+              <li><Link href="/term" className="hover:text-green-400">Terms and Condition</Link></li>
             </ul>
 
             <ul className='flex gap-7 m-auto'>
