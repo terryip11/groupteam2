@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import Whatsapp from '../components/Whatsapp';
 
-function book() {
+function Book() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLoginSuccess = () => {
@@ -31,4 +31,4 @@ function book() {
   );
 }
 
-export default book;
+export default Book;

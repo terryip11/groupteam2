@@ -60,7 +60,7 @@ function Nav() {
                 <Link href="../Club/Club_FF" target="_blank"className="block mt-2 hover:bg-green-500">Club FF</Link>
                 <Link href="../Club/Hanoi_Rock_City/" target="_blank" className="block mt-2 hover:bg-green-500">Hanoi Rock City</Link>
                 <Link href="../Club/The_Flying_V_Metal_Bar" target="_blank" className="block mt-2 hover:bg-green-500">The Flying V Metal Bar</Link>
-                <Link href="../Club/Tom_Dick_&_Harry/" target="_blank" className="block mt-2 hover:bg-green-500">Tom, Dick & Harry's</Link>
+                <Link href="../Club/Tom_Dick_&_Harry/" target="_blank" className="block mt-2 hover:bg-green-500">Tom, Dick & Harry&#39;s</Link>
                 <Link href="../Club/Gimme_Shelter_Bali" target="_blank" className="block mt-2 hover:bg-green-500">Gimme Shelter Bali</Link>
               </div>
             </li>

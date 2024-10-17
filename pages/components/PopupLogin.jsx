@@ -5,7 +5,6 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 
 
-
 export default function PopupLogin({handleToggle}) {
     useEffect(() => {
         const wrapper = document.querySelector('.wrapper');
@@ -71,8 +70,8 @@ export default function PopupLogin({handleToggle}) {
   return (
     <>
     <Head>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" async></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" async></script>
     </Head>
 
     <div className='flex justify-center'>
@@ -100,7 +99,7 @@ export default function PopupLogin({handleToggle}) {
                 <button type="submit" className="btn">Login</button>
                 <buton>
                     <div className="login-register">
-                        <p>Dont'have an account?<Link href="#" className="register-link">Register</Link></p>
+                        <p>Don&apos;t have an account?<Link href="#" className="register-link">Register</Link></p>
                     </div>
                 </buton>
             </form>
