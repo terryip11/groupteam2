@@ -45,13 +45,13 @@ const Sidebar = () => {
                     <ul className='textstyle mt-20 text-center text-3xl text-white flex-col gap-10'>
                         <li className='mb-10'>
                             <Link href="/" className='flex justify-around'>
-                                <HomeIcon className="size-12 mr-10 ml-3" />
+                                <HomeIcon className="size-12 ml-3" />
                                 <p className={`${open ? 'block' : 'hidden'} hover:text-green-500`}>Home</p>
                             </Link>
                         </li>
                         <li className='mb-10'>
                             <div className='flex justify-around items-center cursor-pointer' onClick={() => setVenueExpanded(!venueExpanded)}>
-                                <NightlifeIcon className="size-12 mr-10 ml-3" />
+                                <NightlifeIcon className="size-12 ml-3" />
                                 <p className={`${open ? 'block' : 'hidden'} hover:text-green-500`}>Venue</p>
                                 {open && (venueExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
                             </div>

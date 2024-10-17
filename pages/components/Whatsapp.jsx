@@ -8,7 +8,7 @@ export default function Whatsapp() {
   return (
     <>
         <div className='group fixed bottom-10 right-5 md:bottom-10 md:right-72 z-20'>
-            <span className='duration-500 group-hover:rotate-45 group-hover:translate-x-10 hover:block absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-white'>Contact Us</span>
+            <span className='duration-500 group-hover:rotate-45 group-hover:translate-x-10 hover:block absolute top-0 left-0 opacity-0 group-hover:opacity-100 text-green-400'>Contact Us</span>
                 <Link rel="stylesheet" href="https://api.whatsapp.com/send?phone=64754756">
                 <WhatsAppIcon className='text-8xl text-green-500' />
                 </Link>
