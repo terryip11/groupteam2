@@ -7,6 +7,7 @@ const PaymentForm = () => {
   const [cvv, setCvv] = useState('');
   const [error, setError] = useState('');
   const [cardType, setCardType] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,13 +19,14 @@ const PaymentForm = () => {
       cvv,
       cardType
     });
+    // Show popup
+    setShowPopup(true);
     // Reset form after submission
     setName('');
     setCardNumber('');
     setExpiryDate('');
     setCvv('');
     setCardType('');
-    alert('提交成功佐!俾錢啦!!')
   };
 
   const validateForm = () => {
@@ -35,6 +37,33 @@ const PaymentForm = () => {
     }
     setError('');
     return true;
+  };
+
+  const handleExpiryDateChange = (e) => {
+    const input = e.target.value;
+    // Remove any non-digit characters
+    const cleaned = input.replace(/\D/g, '');
+    
+    // Format as MM/YY
+    if (cleaned.length <= 2) {
+      setExpiryDate(cleaned);
+    } else {
+      setExpiryDate(`${cleaned.slice(0, 2)}/${cleaned.slice(2, 4)}`);
+    }
+  };
+
+  const handleCardNumberChange = (e) => {
+    const input = e.target.value;
+    // Remove any non-digit characters
+    const cleaned = input.replace(/\D/g, '');
+    setCardNumber(cleaned);
+  };
+
+  const handleCvvChange = (e) => {
+    const input = e.target.value;
+    // Remove any non-digit characters
+    const cleaned = input.replace(/\D/g, '');
+    setCvv(cleaned);
   };
 
   const styles = {
@@ -113,6 +142,42 @@ const PaymentForm = () => {
     submitButtonHover: {
       backgroundColor: '#45a049',
     },
+    popup: {
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: '#fff',
+      padding: '30px',
+      borderRadius: '8px',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+      zIndex: 1000,
+      textAlign: 'center',
+    },
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      zIndex: 999,
+    },
+    closeButton: {
+      marginTop: '20px',
+      padding: '10px 20px',
+      backgroundColor: '#4CAF50',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '16px',
+      fontWeight: 'bold',
+      transition: 'background-color 0.3s ease',
+    },
+    closeButtonHover: {
+      backgroundColor: '#45a049',
+    },
   };
 
   return (
@@ -131,8 +196,7 @@ const PaymentForm = () => {
             onChange={(e) => setName(e.target.value)}
             required
             style={styles.input}
-            onFocus={(e) => e.target.style.cssText = `${Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')} ${Object.entries(styles.inputFocus).map(([k, v]) => `${k}:${v};`).join('')}`}
-            onBlur={(e) => e.target.style.cssText = Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')}
+            
           />
         </div>
         <div className="form-group" style={styles.formGroup}>
@@ -169,11 +233,11 @@ const PaymentForm = () => {
           <input
             type="text"
             value={cardNumber}
-            onChange={(e) => setCardNumber(e.target.value)}
+            onChange={handleCardNumberChange}
             required
+            maxLength="16"
             style={styles.input}
-            onFocus={(e) => e.target.style.cssText = `${Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')} ${Object.entries(styles.inputFocus).map(([k, v]) => `${k}:${v};`).join('')}`}
-            onBlur={(e) => e.target.style.cssText = Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')}
+           
           />
         </div>
         <div className="form-group" style={styles.formGroup}>
@@ -181,11 +245,12 @@ const PaymentForm = () => {
           <input
             type="text"
             value={expiryDate}
-            onChange={(e) => setExpiryDate(e.target.value)}
+            onChange={handleExpiryDateChange}
             required
+            maxLength="5"
+            placeholder="MM/YY"
             style={styles.input}
-            onFocus={(e) => e.target.style.cssText = `${Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')} ${Object.entries(styles.inputFocus).map(([k, v]) => `${k}:${v};`).join('')}`}
-            onBlur={(e) => e.target.style.cssText = Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')}
+            
           />
         </div>
         <div className="form-group" style={styles.formGroup}>
@@ -193,11 +258,11 @@ const PaymentForm = () => {
           <input
             type="text"
             value={cvv}
-            onChange={(e) => setCvv(e.target.value)}
+            onChange={handleCvvChange}
             required
+            maxLength="4"
             style={styles.input}
-            onFocus={(e) => e.target.style.cssText = `${Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')} ${Object.entries(styles.inputFocus).map(([k, v]) => `${k}:${v};`).join('')}`}
-            onBlur={(e) => e.target.style.cssText = Object.entries(styles.input).map(([k, v]) => `${k}:${v};`).join('')}
+           
           />
         </div>
         {error && <div className="error-message" style={styles.errorMessage}>{error}</div>}
@@ -210,6 +275,22 @@ const PaymentForm = () => {
           Submit Payment
         </button>
       </form>
+      {showPopup && (
+        <>
+          <div style={styles.overlay} onClick={() => setShowPopup(false)}></div>
+          <div style={styles.popup}>
+            <p>Payment successful. Booking confirmation will be sent shortly.</p>
+            <button 
+              onClick={() => setShowPopup(false)}
+              style={styles.closeButton}
+              onMouseOver={(e) => e.target.style.backgroundColor = styles.closeButtonHover.backgroundColor}
+              onMouseOut={(e) => e.target.style.backgroundColor = styles.closeButton.backgroundColor}
+            >
+              Close
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 };
