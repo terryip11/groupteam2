@@ -55,6 +55,7 @@ const Footer = () => {
         </div>
         
         <div className='text-center text-xl w-full' >
+        <p className='text-white hover:text-green-400 hover:text-5xl duration-500'>Asia Music Bar Performing LTD.</p>
             <p className='text-white hover:text-green-400 hover:text-5xl duration-500'>© Copyright 1999-2024. All Rights Reserved.</p>
         </div>
 

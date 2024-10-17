@@ -7,7 +7,7 @@ import ClubDescription from '../../components/ClubDescription';
 const ClubImage_Video = () => {
   return (
     <>
-      <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">Flying V Metal</div>
+      <div className="text-5xl text-center bg-gray-400 text-white hover:text-blue-600 textstyle">Flying V Metal Bar</div>
         <div className="flex justify-center">
           <Image
             src={FlyingVMetal.src}
