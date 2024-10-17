@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Switch from '@mui/material/Switch';
 import 'tailwindcss/tailwind.css';
-import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import SvgIcon from '@mui/material/SvgIcon';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CallIcon from '@mui/icons-material/Call';
@@ -68,7 +66,7 @@ const Sidebar = () => {
                             )}
                         </li>
                         <li className='mb-10'>
-                            <Link href="/home" className='flex justify-around'>
+                            <Link href="/Booking" className='flex justify-around'>
                                 <ShoppingCartIcon className="size-12 mr-10 ml-3" />
                                 <p className={`${open ? 'block' : 'hidden'} hover:text-green-500`}>Booking</p>
                             </Link>
