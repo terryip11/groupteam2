@@ -24,7 +24,7 @@ const PaymentForm = () => {
     setExpiryDate('');
     setCvv('');
     setCardType('');
-    alert('提交成功佐!俾錢啦!!')
+    alert('Submission Success!')
   };
 
   const validateForm = () => {

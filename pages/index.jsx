@@ -15,8 +15,8 @@ function home() {
       </div>
       
       <div className="video">
-        <iframe
-        src={"https://www.youtube.com/embed/AjVCx4nN2dg?autoplay=1&mute=1"}
+        <iframe 
+        src={"https://www.youtube.com/embed/AjVCx4nN2dg?autoplay=1&mute=1" }
         width="100%"
         height="800"
         allowFullScreen>
