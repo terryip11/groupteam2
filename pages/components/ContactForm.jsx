@@ -17,7 +17,9 @@ const ContactForm = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '50vh', // Full height of the viewport
+            minheight: '50vh', 
+            marginbottm:'50px',
+            padding:'20px 0',
             // backgroundColor: '#f8f8f8' // Optional: add a background color
         }}>
             <form onSubmit={handleSubmit} style={{
