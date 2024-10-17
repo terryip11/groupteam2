@@ -5,10 +5,11 @@ const ContactForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Send the form data to the specified email address
-        // For demonstration purposes, we'll just log the data to the console
-        console.log(`Name: ${state.name}, Info: ${state.info}`);
-        // You can replace this with your email sending logic
+        const { name, info } = state;
+        const subject = 'Contact Form Submission';
+        const body = `Name: ${name}\nInfo: ${info}`;
+        const mailtoLink = `mailto:neway666@yahoo.com.hk?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
     };
 
     return (
