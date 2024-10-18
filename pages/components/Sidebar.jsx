@@ -25,22 +25,23 @@ const Sidebar = () => {
 
     return (
         <>
+            <button className={`md:hidden absolute top-5 right-5 text-white text-3xl`} onClick={() => { setOpen(!open) }}>三</button>
             <aside className="fixed top-0 left-0 bottom-0 font-black text-green-400 md:hidden z-10">
-                <nav className={`sticky ${open ? 'w-[350px]' : 'w-[80px]'} ${open ? 'bg-gray-500' : 'bg-gray-500'}  h-[100vh] z-1 duration-500 overflow-y-auto`}>
-                    <div className='flex justify-end ml-[320px] mb-10'>
+                <nav className={`sticky ${open ? 'w-screen' : 'w-[0px]'} ${open ? 'bg-gray-500' : 'bg-gray-500'}  h-[100vh] z-1 duration-500 overflow-y-auto`}>
+                    <div className='absolute top-5 right-4 flex justify-end ml-[320px] mb-10'>
                         <FormControlLabel 
-                            onClick={() => { setOpen(!open); }}
-                            className={`${open ? 'ml-[50px]' : 'mr-[240px]'} duration-500 mt-3`}
+                            onClick={() => { setOpen(!open) }}
+                            className={`${open ? 'ml-[25px]' : 'mr-[240px]'} duration-500 mt-3`}
                             control={<Switch sx={{ m: 1 }} defaultChecked />}
                             label=""
                         />
                     </div>
 
                     <div className='flex justify-around '>
-                        <h1 className={`${open ? 'block' : 'hidden'} text-5xl p-1`}>Menu</h1>
+                        <h1 className={`${open ? 'block' : 'hidden'} text-5xl p-1 mt-40`}>Menu</h1>
                     </div>
 
-                    <ul className='textstyle mt-20 text-center text-3xl text-white flex-col gap-10'>
+                    <ul className='textstyle mt-20 text-center text-3xl text-white'>
                         <li className='mb-10'>
                             <Link href="/" className='flex justify-around'>
                                 <HomeIcon className="size-12 ml-3" />
@@ -48,9 +49,9 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li className='mb-10'>
-                            <div className='flex justify-around items-center cursor-pointer' onClick={() => setVenueExpanded(!venueExpanded)}>
-                                <NightlifeIcon className="size-12 ml-3" />
-                                <p className={`${open ? 'block' : 'hidden'} hover:text-green-500`}>Venue</p>
+                            <div className='flex justify-center items-center ml-3 cursor-pointer' onClick={() => setVenueExpanded(!venueExpanded)}>
+                                <NightlifeIcon className="size-12 mr-[12rem]" />
+                                <p className={`${open ? 'block' : 'hidden'} ml-[1rem] hover:text-green-500`}>Venue</p>
                                 {open && (venueExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
                             </div>
                             {open && venueExpanded && (
@@ -67,13 +68,13 @@ const Sidebar = () => {
                         </li>
                         <li className='mb-10'>
                             <Link href="/Booking" className='flex justify-around'>
-                                <ShoppingCartIcon className="size-12 mr-10 ml-3" />
+                                <ShoppingCartIcon className="size-12 ml-3" />
                                 <p className={`${open ? 'block' : 'hidden'} hover:text-green-500`}>Booking</p>
                             </Link>
                         </li>
                         <li className='mb-10' >
                             <Link href="/contact" className='flex justify-around'>
-                                <CallIcon className="size-12 mr-10 ml-3" />
+                                <CallIcon className="size-12 ml-3" />
                                 <p className={`${open ? 'block' : 'hidden'} hover:text-green-500`}>Contact</p>
                             </Link>
                         </li>
