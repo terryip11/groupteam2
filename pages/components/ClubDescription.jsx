@@ -33,6 +33,7 @@ const ClubDescription = ({ clubId, description }) => {
         <div style={{ margin: '20px' }}>
             <Typography variant="h1" sx={{ textAlign: 'center', margin: '20px', fontSize: '40px' }}></Typography>
             <p>{clubDescription || 'Description not available.'}</p>
+            <br />
             <Link href='http://localhost:3000/Booking' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">Book Now...</Link>
         </div>
     );
